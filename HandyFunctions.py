@@ -1,3 +1,7 @@
+import numpy as np
+import batman
+import catwoman
+
 ## Functions that will be used ...
 def calc_scale_height(T, M, R, mm=2):
     """ Calculates the approximate scale height of a planet's atmosphere, using the equation
@@ -81,6 +85,9 @@ def logPriors(theta, info_dict):
         if info_dict['Prior'][key][2] == 'U':
             l1, l2 = info_dict['Prior'][key][0][0], info_dict['Prior'][key][0][1]
             if not (l1 <= theta[i] <= l2):
+                #print('parameter went out-of-bounds')
+                #print('bad value = ', theta[i])
+                #print('bounds were ', l1, ' <= val <= ', l2)
                 return -np.inf
         elif info_dict['Prior'][key][2] == 'N':
             pval, perr = info_dict['Prior'][key][0], info_dict['Prior'][key][1]
@@ -107,23 +114,23 @@ def logPriors(theta, info_dict):
 #     step_lc = InitModel.light_curve(Params)
 #     return step_lc
 
-def lnPosterior(theta, flux, flux_errors, info_dict, init_transitmodel, rprs1, rprs2):
-    """
-    Input to the MCMC. Computes the Bayesian posterior
-    """
-    # compute and check priors
-    lnPrior = logPriors(theta, info_dict)
-    if not np.isfinite(lnPrior):
-        return -np.inf
-    
-    # compute transit model and resulting likelihood
-    transit_model_lc = homog_transit_model(theta, init_transitmodel, rprs1, rprs2)
-    lnLikelihood = logLikelihood(flux, flux_errors, transit_model_lc)
-    
-    # compute posterior
-    lnPost = lnPrior + lnLikelihood
-    
-    return lnPost
+#def lnPosterior(theta, flux, flux_errors, info_dict, init_transitmodel, rprs1, rprs2):
+#    """
+#    Input to the MCMC. Computes the Bayesian posterior
+#    """
+#    # compute and check priors
+#    lnPrior = logPriors(theta, info_dict)
+#    if not np.isfinite(lnPrior):
+#        return -np.inf
+#    
+#    # compute transit model and resulting likelihood
+#    transit_model_lc = homog_transit_model(theta, init_transitmodel, rprs1, rprs2)
+#    lnLikelihood = logLikelihood(flux, flux_errors, transit_model_lc)
+#    
+#    # compute posterior
+#    lnPost = lnPrior + lnLikelihood
+#    
+#    return lnPost
 
 def compute_bic(Nparams, Ndata, max_lnL):
     """computes the bayesian information criterion"""
