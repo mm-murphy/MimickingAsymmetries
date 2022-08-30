@@ -9,8 +9,8 @@ from HandyFunctions import *
 import os, sys 
 
 ## Define the output file and destiations for outputting figures
-output_file_path = './run2_synth_scatter250.txt'
-figure_output_path = './figures/synth_scatter250/'
+output_file_path = './run1_synth_scatter50.txt'
+figure_output_path = './figures/synth_scatter50/'
 
 # create the file/directory if it doesn't exist already
 output_file_exists = os.path.isfile(output_file_path)
@@ -78,7 +78,7 @@ else:
     time = np.linspace(t0_new_true-obs_window_size/24., t0_new_true+obs_window_size/24., Ndatapoints)
     # initialize arrays for the flux and flux uncertainty, which will be set later on
     syn_fluxes, syn_errs = np.ones(time.shape), np.ones(time.shape)
-    scatter = 250. # [ppm], standard deviation of flux values about the model
+    scatter = 50. # [ppm], standard deviation of flux values about the model
     flux_uncertainty = scatter # [ppm], uncertainty on each flux point
     print('synthetic observed data initialized')
 
@@ -293,13 +293,13 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     bf_chi2red = compute_chi2(syn_fluxes, syn_errs, bf_model, reduced=True, Ndof=(len(time) - Nparams))
 
 
-    data_asym_residuals = syn_fluxes - init_asym_lc
+    data_asym_residuals = syn_fluxes - this_true_asym_lc
     mean_daresidual = np.mean(data_asym_residuals) 
     mean_abs_daresidual = np.mean(abs(data_asym_residuals))
     data_homog_residuals = syn_fluxes - bf_model
     mean_dhresidual = np.mean(data_homog_residuals)
     mean_abs_dhresidual = np.mean(abs(data_homog_residuals))
-    asym_homog_residuals = init_asym_lc - bf_model
+    asym_homog_residuals = this_true_asym_lc - bf_model
     mean_ahresidual = np.mean(asym_homog_residuals)
     mean_abs_ahresidual = np.mean(abs(asym_homog_residuals))
 
@@ -311,9 +311,9 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('\n')
 
     print('For the true asymmetric model:')
-    true_lnLikelihood = logLikelihood(syn_fluxes, syn_errs, init_asym_lc)
+    true_lnLikelihood = logLikelihood(syn_fluxes, syn_errs, this_true_asym_lc)
     true_bic = compute_bic(len(param_fits), len(syn_fluxes), true_lnLikelihood)
-    true_chi2red = compute_chi2(syn_fluxes, syn_errs, init_asym_lc, reduced=True, Ndof=len(time))
+    true_chi2red = compute_chi2(syn_fluxes, syn_errs, this_true_asym_lc, reduced=True, Ndof=len(time))
     print('True ln Likelihood = ', true_lnLikelihood)
     print('True BIC = ', true_bic)
     print('True reduced chi2 = ', true_chi2red)
@@ -329,38 +329,42 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('Flux Scatter = %.0f ppm'%(scatter))
 
     ## make figure showing the lightcurves and residuals
-    #fig1, ax1 = plt.subplots(figsize=(10,6), sharex=True)
-    #plt.subplots_adjust(hspace=0.15)
-    #ax10, ax11 = ax1[0], ax1[1]
+    fig1, ax1 = plt.subplots(figsize=(10,6), nrows=2, sharex=True)
+    plt.subplots_adjust(hspace=0.15)
+    ax10, ax11 = ax1[0], ax1[1]
     # plotting the lightcurves:
-    #ax10.plot(time, init_asym_lc, c='green', lw=1, label='True Asym. Limb Model')
-    #ax10.plot(time, bf_model, c='blue', lw=1, label='B.F. Homog. Limb Model')
-    #ax10.errorbar(time, syn_fluxes, syn_errs, marker='o', ls='None', ms=2, c='black', label='Synth. Obs. Data')
-    #ax10.set(ylabel='Rel. Flux')
-    #ax10.legend(loc='lower right', fontsize=8)
+    ax10.plot(time, this_true_asym_lc, c='green', lw=1, label='True Asym. Limb Model')
+    ax10.plot(time, bf_model, c='blue', lw=1, label='B.F. Homog. Limb Model')
+    ax10.errorbar(time, syn_fluxes, syn_errs, marker='o', ls='None', ms=2, c='black', label='Synth. Obs. Data')
+    ax10.set(ylabel='Rel. Flux')
+    ax10.legend(loc='lower right', fontsize=8)
     # plotting the residuals
-    #ax11.axhline(0., c='gray', lw=0.5, alpha=0.25)
-    #ax11.plot(time, asym_homog_residuals, lw=1, c='black', label='Asym. Model - Homog. Model')
-    #ax11.scatter(time, data_asym_residuals, c='green', s=2, label='Data - Asym. Model')
-    #ax11.scatter(time, data_homog_residuals, c='blue', s=2, label='Data - Homog. Model')
-    #ax11.set(xlabel='Time', ylabel='Residual [ppm]')
-    #ax11.legend(loc='lower right', fontsize=8)
-    #fig_name = 'lcplot_asym'+ str(asym_factor) + '.png'
-    #plt.savefig(figure_output_path+fig_name, bbox_inches='tight')
-    #plt.close(fig1)
+    ax11.axhline(0., c='gray', lw=0.5, alpha=0.25)
+    ax11.plot(time, 1.e6*asym_homog_residuals, lw=1, c='black', label='Asym. Model - Homog. Model')
+    ax11.scatter(time, 1.e6*data_asym_residuals, c='green', s=2, label='Data - Asym. Model')
+    ax11.scatter(time, 1.e6*data_homog_residuals, c='blue', s=2, label='Data - Homog. Model')
+    ax11.set(xlabel='Time', ylabel='Residual [ppm]')
+    ax11.legend(loc='lower right', fontsize=8)
+    fig_name = 'lcplot_asym'+ str(int(asym_factor)) + '.png'
+    plt.savefig(figure_output_path+fig_name, bbox_inches='tight')
+    plt.close(fig1)
 
     ## make figure showing the distribution of t0 samples
-    #fig2, ax2 = plt.subplots(figsize=(10,5))
-    #ax2.axvline(t0_new_true, c='black', label='Truth')
-    #ax2.axvline(t0_new_guess - t0_new_guess_uncertainty, c='black', ls='--', label='Bounds')
-    #ax2.axvline(t0_new_guess + t0_new_guess_uncertainty, c='black', ls='--')
-    #ax2.hist(flatsamples, color='blue', edgecolor='black')
-    #ax2.set(xlabel='t0')
-    #ax2.yaxis.set_visible(False)
-    #ax2.legend(loc='upper right', fontsize=8)
-    #fig2_name = 'distplot_asym' + str(asym_factor) + '.png'
-    #plt.savefig(figure_output_path+fig2_name, bbox_inches='tight')
-    #plt.close(fig2)
+    fig2, ax2 = plt.subplots(figsize=(10,5))
+    ax2.axvline(t0_new_true, c='black', label='Truth')
+    ax2.axvline(t0_new_guess - t0_new_guess_uncertainty, c='black', ls='--', label='Bounds')
+    ax2.axvline(t0_new_guess + t0_new_guess_uncertainty, c='black', ls='--')
+    ax2.hist(flatsamples, color='blue', edgecolor='black')
+    ax2.set(xlabel='t0')
+    ax2.yaxis.set_visible(False)
+    ax2.legend(loc='upper right', fontsize=8)
+    fig2_name = 'distplot_asym' + str(asym_factor) + '.png'
+    plt.savefig(figure_output_path+fig2_name, bbox_inches='tight')
+    plt.close(fig2)
+
+    print('\n')
+    print('---------------------')
+    print('\n')
 
 
 
