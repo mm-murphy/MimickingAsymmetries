@@ -12,41 +12,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55427446]
- [2459145.55430283]
- [2459145.55428348]]
+[[2459145.55419806]
+ [2459145.55427125]
+ [2459145.55419922]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  2699.3166446326136
-Initial ln Posterior =  2699.3166446326136
+Initial ln Likelihood =  2728.7417212391947
+Initial ln Posterior =  2728.7417212391947
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55414262]
-errors =  [1.96157489e-05]
+Best fit parameters =  [2459145.55414719]
+errors =  [1.96497422e-05]
 True t0 was =  2459145.5542650004
-6.24 sigma difference
-auto correlation times =  [43.0369515]
+6.00 sigma difference
+auto correlation times =  [36.52441894]
 Final ln Prior =  0.0
-Final ln Likelihood =  2718.8661146255854
-Final ln Posterior =  2718.8661146255854
-Final BIC =  -5431.874296096687
-Final reduced chi2 =  1.0494242346386404
+Final ln Likelihood =  2746.5770907755996
+Final ln Posterior =  2746.5770907755996
+Final BIC =  -5487.296248396716
+Final reduced chi2 =  0.8906220790511684
 
 
 For the true asymmetric model:
-True ln Likelihood =  2720.106607090968
-True BIC =  -5434.355281027452
-True reduced chi2 =  1.039337351308916
+True ln Likelihood =  2747.1742054604497
+True BIC =  -5488.490477766416
+True reduced chi2 =  0.8846653606261645
 
 
 Mean Asym. Model - Homog. Model residual = -1 ppm
     mean abs. above = 3 ppm
-Mean Syn. Data - Homog. Model residual = 2 ppm
-    mean abs above = 81 ppm
-Mean Syn. Data - Asym. Model residual = 3 ppm
-    mean abs above = 81 ppm
+Mean Syn. Data - Homog. Model residual = 0 ppm
+    mean abs above = 74 ppm
+Mean Syn. Data - Asym. Model residual = 1 ppm
+    mean abs above = 74 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -61,41 +61,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55428237]
- [2459145.55426461]
- [2459145.55415737]]
+[[2459145.55426041]
+ [2459145.55438241]
+ [2459145.55428538]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  2612.003037026006
-Initial ln Posterior =  2612.003037026006
+Initial ln Likelihood =  2631.339198984386
+Initial ln Posterior =  2631.339198984386
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55397665]
-errors =  [1.54071022e-05]
+Best fit parameters =  [2459145.55399852]
+errors =  [1.89214479e-05]
 True t0 was =  2459145.5542650004
-18.72 sigma difference
-auto correlation times =  [39.06782085]
+14.08 sigma difference
+auto correlation times =  [32.97542225]
 Final ln Prior =  0.0
-Final ln Likelihood =  2728.1284815982563
-Final ln Posterior =  2728.1284815982563
-Final BIC =  -5450.399030042029
-Final reduced chi2 =  0.9963447677465435
+Final ln Likelihood =  2727.4696673744647
+Final ln Posterior =  2727.4696673744647
+Final BIC =  -5449.081401594446
+Final reduced chi2 =  1.0001202074244342
 
 
 For the true asymmetric model:
-True ln Likelihood =  2728.306449414278
-True BIC =  -5450.754965674073
-True reduced chi2 =  0.9924811094614308
+True ln Likelihood =  2731.091837083869
+True BIC =  -5456.325741013255
+True reduced chi2 =  0.9765646084923401
 
 
 Mean Asym. Model - Homog. Model residual = -5 ppm
     mean abs. above = 6 ppm
-Mean Syn. Data - Homog. Model residual = -4 ppm
-    mean abs above = 81 ppm
-Mean Syn. Data - Asym. Model residual = 0 ppm
-    mean abs above = 80 ppm
+Mean Syn. Data - Homog. Model residual = -6 ppm
+    mean abs above = 79 ppm
+Mean Syn. Data - Asym. Model residual = -1 ppm
+    mean abs above = 78 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -110,41 +110,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55436982]
- [2459145.5542979 ]
- [2459145.55424921]]
+[[2459145.55431493]
+ [2459145.55425109]
+ [2459145.55431636]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  2472.057733820274
-Initial ln Posterior =  2472.057733820274
+Initial ln Likelihood =  2439.7951909563817
+Initial ln Posterior =  2439.7951909563817
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55395716]
-errors =  [2.64612027e-06]
+Best fit parameters =  [2459145.55395684]
+errors =  [2.2824388e-06]
 True t0 was =  2459145.5542650004
-116.34 sigma difference
-auto correlation times =  [31.15331438]
+135.01 sigma difference
+auto correlation times =  [32.23432091]
 Final ln Prior =  0.0
-Final ln Likelihood =  2698.406384523225
-Final ln Posterior =  2698.406384523225
-Final BIC =  -5390.9548358919665
-Final reduced chi2 =  1.16667197161492
+Final ln Likelihood =  2685.2855509594046
+Final ln Posterior =  2685.2855509594046
+Final BIC =  -5364.713168764326
+Final reduced chi2 =  1.2418629949032867
 
 
 For the true asymmetric model:
-True ln Likelihood =  2722.7064230299043
-True BIC =  -5439.554912905325
-True reduced chi2 =  1.0244812602292814
+True ln Likelihood =  2709.207418977623
+True BIC =  -5412.556904800763
+True reduced chi2 =  1.1016184262423137
 
 
 Mean Asym. Model - Homog. Model residual = -10 ppm
     mean abs. above = 21 ppm
-Mean Syn. Data - Homog. Model residual = -6 ppm
-    mean abs above = 88 ppm
-Mean Syn. Data - Asym. Model residual = 4 ppm
-    mean abs above = 82 ppm
+Mean Syn. Data - Homog. Model residual = -15 ppm
+    mean abs above = 89 ppm
+Mean Syn. Data - Asym. Model residual = -5 ppm
+    mean abs above = 85 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -159,41 +159,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55418877]
- [2459145.55416199]
- [2459145.55413844]]
+[[2459145.55432392]
+ [2459145.55422996]
+ [2459145.55415983]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  2220.2126556916787
-Initial ln Posterior =  2220.2126556916787
+Initial ln Likelihood =  2260.952965735998
+Initial ln Posterior =  2260.952965735998
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55395573]
-errors =  [1.03143975e-06]
+Best fit parameters =  [2459145.55395584]
+errors =  [1.14087015e-06]
 True t0 was =  2459145.5542650004
-299.84 sigma difference
-auto correlation times =  [30.37454121]
+270.98 sigma difference
+auto correlation times =  [20.19252187]
 Final ln Prior =  0.0
-Final ln Likelihood =  2606.3019643423695
-Final ln Posterior =  2606.3019643423695
-Final BIC =  -5206.745995530256
-Final reduced chi2 =  1.6944909984393064
+Final ln Likelihood =  2627.2555394144647
+Final ln Posterior =  2627.2555394144647
+Final BIC =  -5248.653145674446
+Final reduced chi2 =  1.5744132043298793
 
 
 For the true asymmetric model:
-True ln Likelihood =  2731.156865885436
-True BIC =  -5456.455798616389
-True reduced chi2 =  0.976193015340528
+True ln Likelihood =  2733.359186677747
+True BIC =  -5460.8604402010105
+True reduced chi2 =  0.9636083250987513
 
 
 Mean Asym. Model - Homog. Model residual = -17 ppm
     mean abs. above = 43 ppm
-Mean Syn. Data - Homog. Model residual = -27 ppm
-    mean abs above = 101 ppm
-Mean Syn. Data - Asym. Model residual = -9 ppm
-    mean abs above = 80 ppm
+Mean Syn. Data - Homog. Model residual = -24 ppm
+    mean abs above = 99 ppm
+Mean Syn. Data - Asym. Model residual = -7 ppm
+    mean abs above = 79 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -208,41 +208,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55441913]
- [2459145.55420102]
- [2459145.55421842]]
+[[2459145.55417801]
+ [2459145.55426084]
+ [2459145.55432596]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1963.4825085861255
-Initial ln Posterior =  1963.4825085861255
+Initial ln Likelihood =  1919.9402698717881
+Initial ln Posterior =  1919.9402698717881
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55395549]
-errors =  [7.12927431e-07]
+Best fit parameters =  [2459145.55395545]
+errors =  [6.60307705e-07]
 True t0 was =  2459145.5542650004
-434.13 sigma difference
-auto correlation times =  [16.3379381]
+468.80 sigma difference
+auto correlation times =  [20.60622548]
 Final ln Prior =  0.0
-Final ln Likelihood =  2468.223974305688
-Final ln Posterior =  2468.223974305688
-Final BIC =  -4930.590015456893
-Final reduced chi2 =  2.4857688783056746
+Final ln Likelihood =  2456.5303487057754
+Final ln Posterior =  2456.5303487057754
+Final BIC =  -4907.202764257067
+Final reduced chi2 =  2.552781059394001
 
 
 For the true asymmetric model:
-True ln Likelihood =  2711.857093589304
-True BIC =  -5417.856254024125
-True reduced chi2 =  1.0864774284612795
+True ln Likelihood =  2743.957351034701
+True BIC =  -5482.056768914918
+True reduced chi2 =  0.9030473859161574
 
 
 Mean Asym. Model - Homog. Model residual = -27 ppm
     mean abs. above = 68 ppm
-Mean Syn. Data - Homog. Model residual = -27 ppm
-    mean abs above = 117 ppm
-Mean Syn. Data - Asym. Model residual = -0 ppm
-    mean abs above = 82 ppm
+Mean Syn. Data - Homog. Model residual = -23 ppm
+    mean abs above = 122 ppm
+Mean Syn. Data - Asym. Model residual = 4 ppm
+    mean abs above = 79 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -257,40 +257,40 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55434164]
- [2459145.55419768]
- [2459145.55421492]]
+[[2459145.55432514]
+ [2459145.55416815]
+ [2459145.55421767]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1479.188065310128
-Initial ln Posterior =  1479.188065310128
+Initial ln Likelihood =  1571.7927167238245
+Initial ln Posterior =  1571.7927167238245
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55395529]
-errors =  [4.67989594e-07]
+Best fit parameters =  [2459145.55395532]
+errors =  [4.92902473e-07]
 True t0 was =  2459145.5542650004
-661.79 sigma difference
-auto correlation times =  [19.05977114]
+628.29 sigma difference
+auto correlation times =  [23.97642361]
 Final ln Prior =  0.0
-Final ln Likelihood =  2183.5249933675696
-Final ln Posterior =  2183.5249933675696
-Final BIC =  -4361.192053580656
-Final reduced chi2 =  4.1172816630513385
+Final ln Likelihood =  2245.6259655046383
+Final ln Posterior =  2245.6259655046383
+Final BIC =  -4485.393997854793
+Final reduced chi2 =  3.7614021665638386
 
 
 For the true asymmetric model:
-True ln Likelihood =  2738.17813470928
-True BIC =  -5470.498336264077
-True reduced chi2 =  0.9360714792042748
+True ln Likelihood =  2736.5401610690456
+True BIC =  -5467.222388983608
+True reduced chi2 =  0.9454313285770458
 
 
 Mean Asym. Model - Homog. Model residual = -39 ppm
     mean abs. above = 96 ppm
-Mean Syn. Data - Homog. Model residual = -36 ppm
-    mean abs above = 148 ppm
-Mean Syn. Data - Asym. Model residual = 3 ppm
+Mean Syn. Data - Homog. Model residual = -35 ppm
+    mean abs above = 142 ppm
+Mean Syn. Data - Asym. Model residual = 4 ppm
     mean abs above = 77 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
@@ -306,41 +306,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55430875]
- [2459145.55426086]
- [2459145.55434895]]
+[[2459145.55438967]
+ [2459145.55425493]
+ [2459145.55420992]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  969.9533435569699
-Initial ln Posterior =  969.9533435569699
+Initial ln Likelihood =  992.5491592989932
+Initial ln Posterior =  992.5491592989932
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55395521]
-errors =  [3.67639586e-07]
+Best fit parameters =  [2459145.5539552]
+errors =  [3.63448635e-07]
 True t0 was =  2459145.5542650004
-842.66 sigma difference
-auto correlation times =  [20.94539742]
+852.39 sigma difference
+auto correlation times =  [25.91954009]
 Final ln Prior =  0.0
-Final ln Likelihood =  1830.1962802382018
-Final ln Posterior =  1830.1962802382018
-Final BIC =  -3654.53462732192
-Final reduced chi2 =  6.142088042016199
+Final ln Likelihood =  1849.7983191109433
+Final ln Posterior =  1849.7983191109433
+Final BIC =  -3693.7387050674033
+Final reduced chi2 =  6.029755441026273
 
 
 For the true asymmetric model:
-True ln Likelihood =  2730.538470668019
-True BIC =  -5455.219008181554
-True reduced chi2 =  0.979726702297199
+True ln Likelihood =  2717.1335971088974
+True BIC =  -5428.4092610633115
+True reduced chi2 =  1.0563259797778886
 
 
 Mean Asym. Model - Homog. Model residual = -53 ppm
     mean abs. above = 126 ppm
-Mean Syn. Data - Homog. Model residual = -54 ppm
+Mean Syn. Data - Homog. Model residual = -48 ppm
     mean abs above = 176 ppm
-Mean Syn. Data - Asym. Model residual = -2 ppm
-    mean abs above = 79 ppm
+Mean Syn. Data - Asym. Model residual = 4 ppm
+    mean abs above = 81 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -355,41 +355,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55422956]
- [2459145.55419554]
- [2459145.55418105]]
+[[2459145.55419119]
+ [2459145.5542353 ]
+ [2459145.5542093 ]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  228.58773719550527
-Initial ln Posterior =  228.58773719550527
+Initial ln Likelihood =  335.72306488476147
+Initial ln Posterior =  335.72306488476147
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
 Best fit parameters =  [2459145.55395514]
-errors =  [2.88942829e-07]
+errors =  [2.88709998e-07]
 True t0 was =  2459145.5542650004
-1072.39 sigma difference
-auto correlation times =  [23.04523886]
+1073.26 sigma difference
+auto correlation times =  [23.8108062]
 Final ln Prior =  0.0
-Final ln Likelihood =  1302.3378590331452
-Final ln Posterior =  1302.3378590331452
-Final BIC =  -2598.817784911807
-Final reduced chi2 =  9.167064667833142
+Final ln Likelihood =  1387.4787962830492
+Final ln Posterior =  1387.4787962830492
+Final BIC =  -2769.099659411615
+Final reduced chi2 =  8.679150987317932
 
 
 For the true asymmetric model:
-True ln Likelihood =  2707.4643415346536
-True BIC =  -5409.070749914824
-True reduced chi2 =  1.1115788687735713
+True ln Likelihood =  2737.768875553238
+True BIC =  -5469.679817951993
+True reduced chi2 =  0.9384101029530856
 
 
 Mean Asym. Model - Homog. Model residual = -69 ppm
     mean abs. above = 159 ppm
-Mean Syn. Data - Homog. Model residual = -72 ppm
-    mean abs above = 209 ppm
-Mean Syn. Data - Asym. Model residual = -3 ppm
-    mean abs above = 84 ppm
+Mean Syn. Data - Homog. Model residual = -65 ppm
+    mean abs above = 200 ppm
+Mean Syn. Data - Asym. Model residual = 4 ppm
+    mean abs above = 77 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -404,41 +404,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55429623]
- [2459145.55421564]
- [2459145.55441262]]
+[[2459145.5543437 ]
+ [2459145.55423494]
+ [2459145.55420909]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  -561.2309460124329
-Initial ln Posterior =  -561.2309460124329
+Initial ln Likelihood =  -556.3348922250693
+Initial ln Posterior =  -556.3348922250693
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
-Best fit parameters =  [2459145.55395509]
-errors =  [2.33761966e-07]
+Best fit parameters =  [2459145.5539551]
+errors =  [2.35391781e-07]
 True t0 was =  2459145.5542650004
-1325.75 sigma difference
-auto correlation times =  [20.64076893]
+1316.53 sigma difference
+auto correlation times =  [34.35443111]
 Final ln Prior =  0.0
-Final ln Likelihood =  719.0536091982989
-Final ln Posterior =  719.0536091982989
-Final BIC =  -1432.2492852421144
-Final reduced chi2 =  12.509667818749165
+Final ln Likelihood =  708.8382056401535
+Final ln Posterior =  708.8382056401535
+Final BIC =  -1411.8184781258237
+Final reduced chi2 =  12.568208813351719
 
 
 For the true asymmetric model:
-True ln Likelihood =  2728.834805277672
-True BIC =  -5451.81167740086
-True reduced chi2 =  0.9894619330991801
+True ln Likelihood =  2725.564929963979
+True BIC =  -5445.271926773475
+True reduced chi2 =  1.008146934891712
 
 
 Mean Asym. Model - Homog. Model residual = -87 ppm
     mean abs. above = 195 ppm
-Mean Syn. Data - Homog. Model residual = -82 ppm
-    mean abs above = 238 ppm
-Mean Syn. Data - Asym. Model residual = 5 ppm
-    mean abs above = 81 ppm
+Mean Syn. Data - Homog. Model residual = -87 ppm
+    mean abs above = 243 ppm
+Mean Syn. Data - Asym. Model residual = -0 ppm
+    mean abs above = 82 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -453,41 +453,41 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 0.447 minutes
 Initial parameter array =  [2459145.554265]
 Bounds:  2459145.5542650004  +/-  0.0003101032086257735
-[[2459145.55419162]
- [2459145.55438344]
- [2459145.55434358]]
+[[2459145.554123  ]
+ [2459145.55429551]
+ [2459145.55431383]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  -1625.3789726162709
-Initial ln Posterior =  -1625.3789726162709
+Initial ln Likelihood =  -1536.24712014182
+Initial ln Posterior =  -1536.24712014182
 Running for 30000 steps, including 1000 step burn-in
  ... complete
 sampler outputs grabbed
 For the best fit Homogeneous model:
 Best fit parameters =  [2459145.55395506]
-errors =  [1.93715096e-07]
+errors =  [1.9161962e-07]
 True t0 was =  2459145.5542650004
-1599.98 sigma difference
-auto correlation times =  [16.82580128]
+1617.47 sigma difference
+auto correlation times =  [15.79060969]
 Final ln Prior =  0.0
-Final ln Likelihood =  -124.13406155206678
-Final ln Posterior =  -124.13406155206678
-Final BIC =  254.126056258617
-Final reduced chi2 =  17.34168885456788
+Final ln Likelihood =  -55.42515524146626
+Final ln Posterior =  -55.42515524146626
+Final BIC =  116.70824363741598
+Final reduced chi2 =  16.94794154046702
 
 
 For the true asymmetric model:
-True ln Likelihood =  2707.6651995936354
-True BIC =  -5409.472466032787
-True reduced chi2 =  1.1104311084365297
+True ln Likelihood =  2739.3556281694177
+True BIC =  -5472.853323184352
+True reduced chi2 =  0.9293429451463481
 
 
 Mean Asym. Model - Homog. Model residual = -107 ppm
     mean abs. above = 233 ppm
-Mean Syn. Data - Homog. Model residual = -111 ppm
-    mean abs above = 278 ppm
-Mean Syn. Data - Asym. Model residual = -4 ppm
-    mean abs above = 85 ppm
+Mean Syn. Data - Homog. Model residual = -103 ppm
+    mean abs above = 273 ppm
+Mean Syn. Data - Asym. Model residual = 4 ppm
+    mean abs above = 76 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 

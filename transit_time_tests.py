@@ -9,8 +9,8 @@ from HandyFunctions import *
 import os, sys 
 
 ## Define the output file and destiations for outputting figures
-output_file_path = './run1_synth_scatter50.txt'
-figure_output_path = './figures/synth_scatter50/'
+output_file_path = './run1_synth_scatter250.txt'
+figure_output_path = './figures/synth_scatter250/'
 
 # create the file/directory if it doesn't exist already
 output_file_exists = os.path.isfile(output_file_path)
@@ -78,7 +78,7 @@ else:
     time = np.linspace(t0_new_true-obs_window_size/24., t0_new_true+obs_window_size/24., Ndatapoints)
     # initialize arrays for the flux and flux uncertainty, which will be set later on
     syn_fluxes, syn_errs = np.ones(time.shape), np.ones(time.shape)
-    scatter = 50. # [ppm], standard deviation of flux values about the model
+    scatter = 250. # [ppm], standard deviation of flux values about the model
     flux_uncertainty = scatter # [ppm], uncertainty on each flux point
     print('synthetic observed data initialized')
 
