@@ -1,0 +1,498 @@
+Running program!
+synthetic observed data initialized
+Testing asymmetry factors:  [ 5. 10. 15. 20. 25. 30. 35. 40. 45. 50.]
+Limb radii calculated
+True asymmetric model initialized
+Homogeneous limb fitting model initialized
+Entering MCMC loop ...
+Testing asymmetry factor 5
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.12228; Rp = 1.368 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35293151]
+ [2459796.35294335]
+ [2459796.35295955]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2404.339255750442
+Initial ln Posterior =  2404.339255750442
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35285408]
+errors =  [4.93065454e-05]
+True t0 was =  2459796.353
+2.96 sigma difference
+auto correlation times =  [38.89777878]
+Final ln Prior =  0.0
+Final ln Likelihood =  2408.777358323674
+Final ln Posterior =  2408.777358323674
+Final BIC =  -4811.696783492865
+Final reduced chi2 =  0.9886047512343854
+
+
+For the true asymmetric model:
+True ln Likelihood =  2408.9586199970927
+True BIC =  -4812.059306839702
+True reduced chi2 =  0.9847443852398957
+
+
+Mean Asym. Model - Homog. Model residual = -1 ppm
+    mean abs. above = 2 ppm
+Mean Syn. Data - Homog. Model residual = 5 ppm
+    mean abs above = 201 ppm
+Mean Syn. Data - Asym. Model residual = 7 ppm
+    mean abs above = 201 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 10
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.12596; Rp = 1.410 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35301883]
+ [2459796.35308946]
+ [2459796.35314642]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2387.8560985146037
+Initial ln Posterior =  2387.8560985146037
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35271244]
+errors =  [4.07435e-05]
+True t0 was =  2459796.353
+7.06 sigma difference
+auto correlation times =  [43.02707473]
+Final ln Prior =  0.0
+Final ln Likelihood =  2406.662018667715
+Final ln Posterior =  2406.662018667715
+Final BIC =  -4807.466104180947
+Final reduced chi2 =  1.0007270415264147
+
+
+For the true asymmetric model:
+True ln Likelihood =  2407.58373795884
+True BIC =  -4809.309542763197
+True reduced chi2 =  0.9926008540299119
+
+
+Mean Asym. Model - Homog. Model residual = -5 ppm
+    mean abs. above = 6 ppm
+Mean Syn. Data - Homog. Model residual = -5 ppm
+    mean abs above = 200 ppm
+Mean Syn. Data - Asym. Model residual = -0 ppm
+    mean abs above = 200 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 15
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.12963; Rp = 1.451 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35291283]
+ [2459796.35308031]
+ [2459796.35296809]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2366.968389467348
+Initial ln Posterior =  2366.968389467348
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35266373]
+errors =  [1.35770533e-05]
+True t0 was =  2459796.353
+24.77 sigma difference
+auto correlation times =  [46.22353726]
+Final ln Prior =  0.0
+Final ln Likelihood =  2410.0444618192887
+Final ln Posterior =  2410.0444618192887
+Final BIC =  -4814.230990484094
+Final reduced chi2 =  0.981343413150633
+
+
+For the true asymmetric model:
+True ln Likelihood =  2415.177001509786
+True BIC =  -4824.496069865088
+True reduced chi2 =  0.9492107765959351
+
+
+Mean Asym. Model - Homog. Model residual = -10 ppm
+    mean abs. above = 17 ppm
+Mean Syn. Data - Homog. Model residual = -4 ppm
+    mean abs above = 199 ppm
+Mean Syn. Data - Asym. Model residual = 6 ppm
+    mean abs above = 195 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 20
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.13331; Rp = 1.492 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35309403]
+ [2459796.35306476]
+ [2459796.3529118 ]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2278.522956303196
+Initial ln Posterior =  2278.522956303196
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265718]
+errors =  [7.01122917e-06]
+True t0 was =  2459796.353
+48.90 sigma difference
+auto correlation times =  [44.86776955]
+Final ln Prior =  0.0
+Final ln Likelihood =  2344.7803607368387
+Final ln Posterior =  2344.7803607368387
+Final BIC =  -4683.702788319194
+Final reduced chi2 =  1.3553497230787153
+
+
+For the true asymmetric model:
+True ln Likelihood =  2362.979715905886
+True BIC =  -4720.101498657289
+True reduced chi2 =  1.2474809800467883
+
+
+Mean Asym. Model - Homog. Model residual = -17 ppm
+    mean abs. above = 39 ppm
+Mean Syn. Data - Homog. Model residual = -31 ppm
+    mean abs above = 232 ppm
+Mean Syn. Data - Asym. Model residual = -14 ppm
+    mean abs above = 224 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 25
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.13699; Rp = 1.533 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35305542]
+ [2459796.35292981]
+ [2459796.35292555]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2260.1889122932844
+Initial ln Posterior =  2260.1889122932844
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265513]
+errors =  [4.6431087e-06]
+True t0 was =  2459796.353
+74.28 sigma difference
+auto correlation times =  [36.69974519]
+Final ln Prior =  0.0
+Final ln Likelihood =  2351.048153270386
+Final ln Posterior =  2351.048153270386
+Final BIC =  -4696.238373386289
+Final reduced chi2 =  1.3194311412245736
+
+
+For the true asymmetric model:
+True ln Likelihood =  2386.0499026756884
+True BIC =  -4766.241872196893
+True reduced chi2 =  1.1156513413622056
+
+
+Mean Asym. Model - Homog. Model residual = -27 ppm
+    mean abs. above = 64 ppm
+Mean Syn. Data - Homog. Model residual = -7 ppm
+    mean abs above = 228 ppm
+Mean Syn. Data - Asym. Model residual = 20 ppm
+    mean abs above = 214 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 30
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.14067; Rp = 1.574 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35301391]
+ [2459796.35306316]
+ [2459796.35305984]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2176.4561085031905
+Initial ln Posterior =  2176.4561085031905
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265368]
+errors =  [3.0559022e-06]
+True t0 was =  2459796.353
+113.33 sigma difference
+auto correlation times =  [26.98280405]
+Final ln Prior =  0.0
+Final ln Likelihood =  2302.2577253107884
+Final ln Posterior =  2302.2577253107884
+Final BIC =  -4598.657517467093
+Final reduced chi2 =  1.5990324475833
+
+
+For the true asymmetric model:
+True ln Likelihood =  2385.5313988255466
+True BIC =  -4765.20486449661
+True reduced chi2 =  1.118614220505874
+
+
+Mean Asym. Model - Homog. Model residual = -39 ppm
+    mean abs. above = 92 ppm
+Mean Syn. Data - Homog. Model residual = -47 ppm
+    mean abs above = 249 ppm
+Mean Syn. Data - Asym. Model residual = -8 ppm
+    mean abs above = 213 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 35
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.14435; Rp = 1.615 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35306248]
+ [2459796.35306205]
+ [2459796.35300781]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2126.455955671963
+Initial ln Posterior =  2126.455955671963
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265351]
+errors =  [2.67685391e-06]
+True t0 was =  2459796.353
+129.44 sigma difference
+auto correlation times =  [30.49886833]
+Final ln Prior =  0.0
+Final ln Likelihood =  2264.484364917066
+Final ln Posterior =  2264.484364917066
+Final BIC =  -4523.110796679649
+Final reduced chi2 =  1.8154986962579245
+
+
+For the true asymmetric model:
+True ln Likelihood =  2372.7788478590883
+True BIC =  -4739.699762563693
+True reduced chi2 =  1.1914859403142042
+
+
+Mean Asym. Model - Homog. Model residual = -53 ppm
+    mean abs. above = 122 ppm
+Mean Syn. Data - Homog. Model residual = -52 ppm
+    mean abs above = 265 ppm
+Mean Syn. Data - Asym. Model residual = 1 ppm
+    mean abs above = 216 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 40
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.14802; Rp = 1.657 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35304278]
+ [2459796.35302418]
+ [2459796.35303331]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  2001.7482617382982
+Initial ln Posterior =  2001.7482617382982
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265279]
+errors =  [1.94110908e-06]
+True t0 was =  2459796.353
+178.87 sigma difference
+auto correlation times =  [25.06667244]
+Final ln Prior =  0.0
+Final ln Likelihood =  2184.7480670223426
+Final ln Posterior =  2184.7480670223426
+Final BIC =  -4363.638200890202
+Final reduced chi2 =  2.2724402314712413
+
+
+For the true asymmetric model:
+True ln Likelihood =  2380.045965552602
+True BIC =  -4754.233997950721
+True reduced chi2 =  1.1499595534941265
+
+
+Mean Asym. Model - Homog. Model residual = -69 ppm
+    mean abs. above = 154 ppm
+Mean Syn. Data - Homog. Model residual = -61 ppm
+    mean abs above = 296 ppm
+Mean Syn. Data - Asym. Model residual = 8 ppm
+    mean abs above = 215 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 45
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.15170; Rp = 1.698 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35299192]
+ [2459796.35291101]
+ [2459796.35307281]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  1904.5352731390017
+Initial ln Posterior =  1904.5352731390017
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265247]
+errors =  [1.54809095e-06]
+True t0 was =  2459796.353
+224.49 sigma difference
+auto correlation times =  [23.29845862]
+Final ln Prior =  0.0
+Final ln Likelihood =  2128.172705658635
+Final ln Posterior =  2128.172705658635
+Final BIC =  -4250.487478162787
+Final reduced chi2 =  2.5966543367073895
+
+
+For the true asymmetric model:
+True ln Likelihood =  2410.2300820008304
+True BIC =  -4814.602230847177
+True reduced chi2 =  0.9774788880756793
+
+
+Mean Asym. Model - Homog. Model residual = -87 ppm
+    mean abs. above = 190 ppm
+Mean Syn. Data - Homog. Model residual = -87 ppm
+    mean abs above = 300 ppm
+Mean Syn. Data - Asym. Model residual = 0 ppm
+    mean abs above = 192 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+Testing asymmetry factor 50
+This trailing limb radius: RpRs = 0.11860; Rp = 1.327 RJupiter
+This leading limb radius: RpRs = 0.15538; Rp = 1.739 RJupiter
+Fitting for the transit time
+t0 uncertainty (after propagation) = 0.502 minutes
+Initial parameter array =  [2459796.353]
+Bounds:  2459796.353  +/-  0.0003488552708502481
+[[2459796.35282095]
+ [2459796.35310846]
+ [2459796.3527705 ]]
+N parameters =  1
+Initial ln Prior =  0.0
+Initial ln Likelihood =  1734.5876017941741
+Initial ln Posterior =  1734.5876017941741
+Running for 30000 steps, including 1000 step burn-in
+ ... complete
+sampler outputs grabbed
+For the best fit Homogeneous model:
+Best fit parameters =  [2459796.35265223]
+errors =  [1.33062713e-06]
+True t0 was =  2459796.353
+261.36 sigma difference
+auto correlation times =  [29.9788805]
+Final ln Prior =  0.0
+Final ln Likelihood =  1992.2152676370506
+Final ln Posterior =  1992.2152676370506
+Final BIC =  -3978.572602119618
+Final reduced chi2 =  3.3757800560287894
+
+
+For the true asymmetric model:
+True ln Likelihood =  2424.0939817972367
+True BIC =  -4842.33003043999
+True reduced chi2 =  0.8982566035247865
+
+
+Mean Asym. Model - Homog. Model residual = -107 ppm
+    mean abs. above = 227 ppm
+Mean Syn. Data - Homog. Model residual = -122 ppm
+    mean abs above = 335 ppm
+Mean Syn. Data - Asym. Model residual = -15 ppm
+    mean abs above = 187 ppm
+Mean Syn. Data Uncertainty = 250 ppm
+Flux Scatter = 250 ppm
+
+
+---------------------
+
+
+ran fine

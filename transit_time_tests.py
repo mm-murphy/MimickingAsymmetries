@@ -9,8 +9,12 @@ from HandyFunctions import *
 import os, sys 
 
 ## Define the output file and destiations for outputting figures
-output_file_path = './run1_synth_scatter250.txt'
-figure_output_path = './figures/synth_scatter250/'
+## Parameters that are used in the code and also for naming:
+Ntransits_ahead = 20000 # N transits ahead of lit. transit time to place our new data
+                         # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
+scatter = 250. # [ppm], standard deviation of flux values about the model
+output_file_path = './run1_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'.txt'
+figure_output_path = './figures/synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'/'
 
 # create the file/directory if it doesn't exist already
 output_file_exists = os.path.isfile(output_file_path)
@@ -67,8 +71,8 @@ else:
     # it will be a single transit set some N periods ahead of the literature transit time, given above
     t0_true = lit_params['t0'][0]  # literature transit time [day]
     P_true = lit_params['P'][0]    # literature period [day]
-    Ntransits_ahead = 10 # N transits ahead of lit. transit time to place our new data
-                         # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
+ #   Ntransits_ahead = 10 # N transits ahead of lit. transit time to place our new data
+ #                        # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
     t0_new_true = t0_true + Ntransits_ahead*P_true  # 'True' propagated transit time, just set to prev. measured ephemeris propagated forward
     t0_new_guess = t0_true + Ntransits_ahead*P_true # our guess of what the new transit time would be, based on prev. measured ephemeris
     t0_new_guess_uncertainty = np.sqrt( (lit_params['t0'][1]**2) + (Ntransits_ahead**2)*(lit_params['P'][1]**2))
@@ -78,7 +82,7 @@ else:
     time = np.linspace(t0_new_true-obs_window_size/24., t0_new_true+obs_window_size/24., Ndatapoints)
     # initialize arrays for the flux and flux uncertainty, which will be set later on
     syn_fluxes, syn_errs = np.ones(time.shape), np.ones(time.shape)
-    scatter = 250. # [ppm], standard deviation of flux values about the model
+#    scatter = 250. # [ppm], standard deviation of flux values about the model
     flux_uncertainty = scatter # [ppm], uncertainty on each flux point
     print('synthetic observed data initialized')
 
