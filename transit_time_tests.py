@@ -10,19 +10,25 @@ import os, sys
 
 ## Define the output file and destiations for outputting figures
 ## Parameters that are used in the code and also for naming:
-Ntransits_ahead = 20000 # N transits ahead of lit. transit time to place our new data
+runN = 1
+Ntransits_ahead = 2000 # N transits ahead of lit. transit time to place our new data
                          # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
-scatter = 250. # [ppm], standard deviation of flux values about the model
-output_file_path = './run1_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'.txt'
+scatter = 50. # [ppm], standard deviation of flux values about the model
+output_file_path = './run'+str(runN)+'_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'.txt'
 figure_output_path = './figures/synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'/'
 
 # create the file/directory if it doesn't exist already
 output_file_exists = os.path.isfile(output_file_path)
+rewrite = True
 if output_file_exists:
-    print('these results already exist')
-    print('option to not rewrite is not yet created')
-    os.remove(output_file_path)
-    with open(output_file_path, 'w') as f: pass # creates an empty output file
+    if rewrite:
+        os.remove(output_file_path)
+        with open(output_file_path, 'w') as f: pass # creates an empty output file
+    else:
+        runN += 1
+        output_file_path = './run'+str(runN)+'_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'.txt'
+        figure_output_path = './figures/synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'/'
+        with open(output_file_path, 'w') as f: pass # creates an empty output file
 else:
     with open(output_file_path, 'w') as f: pass # creates an empty output file
 
@@ -56,7 +62,8 @@ lit_params = {
     'inc':np.array([85.6, 0.2, 'degrees', 'Hellier+ 2014'], dtype=object),
     'cosi':np.array([np.cos(85.6*(np.pi/180.)), np.sin(85.6*(np.pi/180.))*(0.2*(np.pi/180.)), 'unitless', 'calculated'], dtype=object),
     'u1':np.array([0.1777, 0.5, 'unitless', 'Claret+ 2011 tabulation'], dtype=object), # note: this uncertainty set arbitrarily
-    'u2':np.array([0.2952, 0.5, 'unitless', 'Claret+ 2011 tabulation'], dtype=object) # note: this uncertainty set arbitrarily
+    'u2':np.array([0.2952, 0.5, 'unitless', 'Claret+ 2011 tabulation'], dtype=object), # note: this uncertainty set arbitrarily
+    'T14':np.array([2.4264, 0.0264, 'hours', 'Hellier 2014'], dtype=object)
 }
 
 ### Load in data OR set up synthetic observations
@@ -80,6 +87,7 @@ else:
     Ndatapoints = 350    # number of light curve points
     # generate time axis
     time = np.linspace(t0_new_true-obs_window_size/24., t0_new_true+obs_window_size/24., Ndatapoints)
+    idxs_intransit = np.where((time >= (t0_new_true - 0.5*lit_params['T14'][0]/24.)) & (time <= (t0_new_true + 0.5*lit_params['T14'][0]/24.)))[0]
     # initialize arrays for the flux and flux uncertainty, which will be set later on
     syn_fluxes, syn_errs = np.ones(time.shape), np.ones(time.shape)
 #    scatter = 250. # [ppm], standard deviation of flux values about the model
@@ -89,7 +97,7 @@ else:
 ### Generating the intrinsic asymmetry model
 ## First, we need to define what asymmetry factor to use (or what range of values to use)
 ##   note: as of right now, the factor is defined the number of scale heights by which the two radii differ
-asymmetry_factors_totest = np.array([5., 10., 15., 20., 25., 30., 35., 40., 45., 50.])
+asymmetry_factors_totest = np.array([1., 3., 5., 10., 15., 20., 25., 30., 35., 40., 45., 50.])
 print('Testing asymmetry factors: ', asymmetry_factors_totest)
 
 # create array of trailing limb RpRs vals (always the same value = the literature value)
@@ -109,7 +117,7 @@ for i_factor, asymfactor in enumerate(asymmetry_factors_totest):
     # convert this to an Rp/Rs ratio
     this_rprs2 = convert_rpJ_to_rprs(this_rp2, lit_params['Rs'][0])
     rprs2_vals[i_factor] = this_rprs2
-print('Limb radii calculated')
+#print('Limb radii calculated')
     
 ## Creating an initialized CATWOMAN model for the asymmetric limb transit
 # note - can change the rp2 argument later on to regenerate new asymmetry factor models
@@ -128,7 +136,7 @@ InitAsymParams.phi = 90.                     # 90 - obliquity [deg]
 InitAsymParams.limb_dark = 'quadratic'        # type of limb darkening law to use
 InitAsymModel = catwoman.TransitModel(InitAsymParams, time)
 init_asym_lc = InitAsymModel.light_curve(InitAsymParams)
-print('True asymmetric model initialized')
+#print('True asymmetric model initialized')
 
 ## Creating an initialized BATMAN model environment for the homogeneous limb transit
 InitHomogParams = batman.TransitParams()
@@ -143,7 +151,7 @@ InitHomogParams.u = [lit_params['u1'][0], lit_params['u2'][0]]  # limb darkening
 InitHomogParams.limb_dark = 'quadratic' # type of limb darkening law to use
 InitHomogModel = batman.TransitModel(InitHomogParams, time)
 init_homog_lc = InitHomogModel.light_curve(InitHomogParams)
-print('Homogeneous limb fitting model initialized')
+#print('Homogeneous limb fitting model initialized')
 
 
 ### Setting up the MCMC fitting
@@ -153,20 +161,18 @@ print('Homogeneous limb fitting model initialized')
 fit_pars = {
     'Init':{
         # Initialization values
-        't0':t0_new_guess#,
-    #    'log10P':lit_params['log10P'][0]
+        't0':t0_new_guess
     },
     'Prior':{
         # Bayesian priors
         # 0 = prior value or prior bounds if type = uniform, 1 = prior error (also initialization ball size), 2 = prior type
-        't0':np.array([(t0_new_guess - t0_new_guess_uncertainty, t0_new_guess + t0_new_guess_uncertainty), lit_params['t0'][1], 'U'], dtype=object)#,
-    #    'log10P':np.array([(lit_params['log10P'][0]-3.*lit_params['log10P'][1], lit_params['log10P'][0]+3.*lit_params['log10P'][1]), lit_params['log10P'][1], 'U'], dtype=object),
+        't0':np.array([(t0_new_guess - t0_new_guess_uncertainty, t0_new_guess + t0_new_guess_uncertainty), lit_params['t0'][1], 'U'], dtype=object)
     }
 }
 
 
 
-def homog_transit_model(theta, InitModel, rprs1, rprs2):
+def homog_transit_model(theta, InitModel, rprs):
     """
     Input to the MCMC. Given a set of parameters (theta) and an initialized BATMAN environment (InitModel),
         outputs the model lightcurve array\
@@ -175,7 +181,7 @@ def homog_transit_model(theta, InitModel, rprs1, rprs2):
     Params = batman.TransitParams()
     Params.t0 = theta[0]
     Params.per = lit_params['P'][0]
-    Params.rp = np.mean((rprs1, rprs2))
+    Params.rp = rprs
     Params.a = lit_params['a'][0]
     Params.inc = lit_params['inc'][0]
     Params.ecc = 0.
@@ -185,7 +191,7 @@ def homog_transit_model(theta, InitModel, rprs1, rprs2):
     step_lc = InitModel.light_curve(Params)
     return step_lc
 
-def lnPosterior(theta, flux, flux_errors, info_dict, init_transitmodel, rprs1, rprs2):
+def lnPosterior(theta, flux, flux_errors, info_dict, init_transitmodel, rprs_homog):
     """
     Input to the MCMC. Computes the Bayesian posterior
     """
@@ -195,7 +201,7 @@ def lnPosterior(theta, flux, flux_errors, info_dict, init_transitmodel, rprs1, r
         return -np.inf
 
     # compute transit model and resulting likelihood
-    transit_model_lc = homog_transit_model(theta, init_transitmodel, rprs1, rprs2)
+    transit_model_lc = homog_transit_model(theta, init_transitmodel, rprs_homog)
     lnLikelihood = logLikelihood(flux, flux_errors, transit_model_lc)
 
     # compute posterior
@@ -239,6 +245,7 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     InitAsymParams.rp = this_rprs1 # trailing limb RpRs
     InitAsymParams.rp2 = this_rprs2 # leading limb RpRs
     this_true_asym_lc = InitAsymModel.light_curve(InitAsymParams)
+    rprs_homog = np.sqrt(np.mean([this_rprs1**2, this_rprs2**2]))
     
     # generate the synthetic data
     if not loadData:
@@ -251,12 +258,12 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
             syn_errs[i_point] = (flux_uncertainty / 1.e6)
     
     # generate the initial homog light curve
-    init_homog_lc = homog_transit_model(theta_init, InitHomogModel, this_rprs1, this_rprs2)
+    init_homog_lc = homog_transit_model(theta_init, InitHomogModel, rprs_homog)
     
     # compute initial statistics
     print('N parameters = ', Nparams)
     initial_lnPrior = logPriors(theta_init, fit_pars)
-    initial_lnPost = lnPosterior(theta_init, syn_fluxes, syn_errs, fit_pars, InitHomogModel, this_rprs1, this_rprs2)
+    initial_lnPost = lnPosterior(theta_init, syn_fluxes, syn_errs, fit_pars, InitHomogModel, rprs_homog)
     initial_lnLikelihood = initial_lnPost - initial_lnPrior
     print('Initial ln Prior = ', initial_lnPrior)
     print('Initial ln Likelihood = ', initial_lnLikelihood)
@@ -266,7 +273,7 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('Running for %d steps, including %d step burn-in'%(Nsteps, Nburn))
     with Pool() as pool:
         sampler = emcee.EnsembleSampler(Nwalkers, Nparams, lnPosterior, pool=pool, 
-                                     args=(syn_fluxes, syn_errs, fit_pars, InitHomogModel, this_rprs1, this_rprs2))
+                                     args=(syn_fluxes, syn_errs, fit_pars, InitHomogModel, rprs_homog))
         state = sampler.run_mcmc(pos, Nsteps, progress=True)
     print(' ... complete')
     # grab the outputs
@@ -290,22 +297,22 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('%.2f sigma difference'%(sigdiff))
     print('auto correlation times = ', autocorrtimes)
     bf_lnPrior = logPriors(param_fits, fit_pars)
-    bf_lnPost = lnPosterior(param_fits, syn_fluxes, syn_errs, fit_pars, InitHomogModel, this_rprs1, this_rprs2)
-    bf_model = homog_transit_model(param_fits, InitHomogModel, this_rprs1, this_rprs2)
+    bf_lnPost = lnPosterior(param_fits, syn_fluxes, syn_errs, fit_pars, InitHomogModel, rprs_homog)
+    bf_model = homog_transit_model(param_fits, InitHomogModel, rprs_homog)
     bf_lnLikelihood = logLikelihood(syn_fluxes, syn_errs, bf_model)
     bf_bic = compute_bic(len(param_fits), len(syn_fluxes), bf_lnLikelihood)
-    bf_chi2red = compute_chi2(syn_fluxes, syn_errs, bf_model, reduced=True, Ndof=(len(time) - Nparams))
+    bf_chi2red = compute_chi2(syn_fluxes, syn_errs, bf_model, reduced=True, Ndof=(len(time)))
 
 
     data_asym_residuals = syn_fluxes - this_true_asym_lc
-    mean_daresidual = np.mean(data_asym_residuals) 
-    mean_abs_daresidual = np.mean(abs(data_asym_residuals))
+    mean_daresidual, mean_daresidual_it = np.mean(data_asym_residuals), np.mean(data_asym_residuals[idxs_intransit])
+    mean_abs_daresidual, mean_abs_daresidual_it = np.mean(abs(data_asym_residuals)), np.mean(abs(data_asym_residuals[idxs_intransit]))
     data_homog_residuals = syn_fluxes - bf_model
-    mean_dhresidual = np.mean(data_homog_residuals)
-    mean_abs_dhresidual = np.mean(abs(data_homog_residuals))
+    mean_dhresidual, mean_dhresidual_it = np.mean(data_homog_residuals), np.mean(data_homog_residuals[idxs_intransit])
+    mean_abs_dhresidual, mean_abs_dhresidual_it = np.mean(abs(data_homog_residuals)), np.mean(abs(data_homog_residuals[idxs_intransit]))
     asym_homog_residuals = this_true_asym_lc - bf_model
-    mean_ahresidual = np.mean(asym_homog_residuals)
-    mean_abs_ahresidual = np.mean(abs(asym_homog_residuals))
+    mean_ahresidual, mean_ahresidual_it = np.mean(asym_homog_residuals), np.mean(asym_homog_residuals[idxs_intransit])
+    mean_abs_ahresidual, mean_abs_ahresidual_it = np.mean(abs(asym_homog_residuals)), np.mean(abs(asym_homog_residuals[idxs_intransit]))
 
     print('Final ln Prior = ', bf_lnPrior)
     print('Final ln Likelihood = ', bf_lnLikelihood)
@@ -321,8 +328,22 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('True ln Likelihood = ', true_lnLikelihood)
     print('True BIC = ', true_bic)
     print('True reduced chi2 = ', true_chi2red)
+    bayes_factor = true_lnLikelihood / bf_lnLikelihood
+    # if bayes_factor <= 1 - homog model preferred or can't be ruled out
+    print('Bayes factor = ', bayes_factor)
+    if bayes_factor >= 2.0:
+        print('    this prefers the asymmetric model!')
+        print('    so asymmetry may be retrieved given these parameters')
+        print('    must manually decide whether this evidence is strong enough')
+    elif (1. <= bayes_factor < 2.):
+        print('    this prefers the asymmetric model')
+        print('    evidence is only slight though')
+    else:
+        print('    homogeneous model cannot be ruled out')
+        print('    asymmetry may not be retrieved given these parameters')
     print('\n')
 
+    print('Full array residuals:')
     print('Mean Asym. Model - Homog. Model residual = %.0f ppm'%(1.e6*mean_ahresidual))
     print('    mean abs. above = %.0f ppm'%(1.e6*mean_abs_ahresidual))
     print('Mean Syn. Data - Homog. Model residual = %.0f ppm'%(1.e6*mean_dhresidual))
@@ -330,6 +351,16 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('Mean Syn. Data - Asym. Model residual = %.0f ppm'%(1.e6*mean_daresidual))
     print('    mean abs above = %.0f ppm'%(1.e6*mean_abs_daresidual))
     print('Mean Syn. Data Uncertainty = %.0f ppm'%(1.e6*np.mean(syn_errs)))
+    print('Flux Scatter = %.0f ppm'%(scatter))
+
+    print('In-transit residuals:')
+    print('Mean Asym. Model - Homog. Model residual = %.0f ppm'%(1.e6*mean_ahresidual_it))
+    print('    mean abs. above = %.0f ppm'%(1.e6*mean_abs_ahresidual_it))
+    print('Mean Syn. Data - Homog. Model residual = %.0f ppm'%(1.e6*mean_dhresidual_it))
+    print('    mean abs above = %.0f ppm'%(1.e6*mean_abs_dhresidual_it))
+    print('Mean Syn. Data - Asym. Model residual = %.0f ppm'%(1.e6*mean_daresidual_it))
+    print('    mean abs above = %.0f ppm'%(1.e6*mean_abs_daresidual_it))
+    print('Mean Syn. Data Uncertainty = %.0f ppm'%(1.e6*np.mean(syn_errs[idxs_intransit])))
     print('Flux Scatter = %.0f ppm'%(scatter))
 
     ## make figure showing the lightcurves and residuals
@@ -356,8 +387,10 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     ## make figure showing the distribution of t0 samples
     fig2, ax2 = plt.subplots(figsize=(10,5))
     ax2.axvline(t0_new_true, c='black', label='Truth')
-    ax2.axvline(t0_new_guess - t0_new_guess_uncertainty, c='black', ls='--', label='Bounds')
-    ax2.axvline(t0_new_guess + t0_new_guess_uncertainty, c='black', ls='--')
+    ax2.axvline(t0_new_guess, c='blue', label='Prop. Guess')
+    unc_extent = t0_new_guess_uncertainty * 24. * 60.
+    ax2.axvline(t0_new_guess - t0_new_guess_uncertainty, c='blue', ls='--', label='Prop. Uncert. (Bounds); +/- %.3f min'%(unc_extent))
+    ax2.axvline(t0_new_guess + t0_new_guess_uncertainty, c='blue', ls='--')
     ax2.hist(flatsamples, color='blue', edgecolor='black')
     ax2.set(xlabel='t0')
     ax2.yaxis.set_visible(False)
