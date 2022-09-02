@@ -97,7 +97,7 @@ else:
 ### Generating the intrinsic asymmetry model
 ## First, we need to define what asymmetry factor to use (or what range of values to use)
 ##   note: as of right now, the factor is defined the number of scale heights by which the two radii differ
-asymmetry_factors_totest = np.array([1., 3., 5., 10., 15., 20., 25., 30., 35., 40., 45., 50.])
+asymmetry_factors_totest = np.array([1., 3., 5., 7.5, 10., 15., 20., 25., 30., 35., 40., 45., 50.])
 print('Testing asymmetry factors: ', asymmetry_factors_totest)
 
 # create array of trailing limb RpRs vals (always the same value = the literature value)
@@ -221,7 +221,7 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('This leading limb radius: RpRs = %.5f; Rp = %.3f RJupiter'%(this_rprs2, this_rpJ2))
     print('Fitting for the transit time')
     t0_uncert_minutes = t0_new_guess_uncertainty * 24. * 60.
-    print('t0 uncertainty (after propagation) = %.3f minutes'%(t0_uncert_minutes))
+    print('t0 uncertainty (after propagation) = %f minutes'%(t0_uncert_minutes))
     
     # set up initial parameter array and walkers
     Nparams = len(fit_pars['Init'].keys())
@@ -234,7 +234,7 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('Bounds: ', t0_new_guess, ' +/- ', t0_new_guess_uncertainty)
     
     Nwalkers = 3*Nparams
-    Nsteps = 30000
+    Nsteps = 20000
     Nburn = 1000
     pos = np.zeros((Nwalkers, Nparams))
     for j in range(Nparams):
@@ -295,6 +295,8 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('True t0 was = ', t0_new_true)
     sigdiff = abs(param_fits[0] - t0_new_true)/param_errs[0]
     print('%.2f sigma difference'%(sigdiff))
+    tdiff = param_fits[0] - t0_new_true # diff between b.f. time and true time in [day]
+    print('time difference = %f minutes'%(tdiff*24.*60.))
     print('auto correlation times = ', autocorrtimes)
     bf_lnPrior = logPriors(param_fits, fit_pars)
     bf_lnPost = lnPosterior(param_fits, syn_fluxes, syn_errs, fit_pars, InitHomogModel, rprs_homog)
@@ -313,6 +315,10 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     asym_homog_residuals = this_true_asym_lc - bf_model
     mean_ahresidual, mean_ahresidual_it = np.mean(asym_homog_residuals), np.mean(asym_homog_residuals[idxs_intransit])
     mean_abs_ahresidual, mean_abs_ahresidual_it = np.mean(abs(asym_homog_residuals)), np.mean(abs(asym_homog_residuals[idxs_intransit]))
+    
+    max_daresidual = max(abs(data_asym_residuals))
+    max_dhresidual = max(abs(data_homog_residuals))
+    max_ahresidual = max(abs(asym_homog_residuals))
 
     print('Final ln Prior = ', bf_lnPrior)
     print('Final ln Likelihood = ', bf_lnLikelihood)
@@ -352,7 +358,7 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('    mean abs above = %.0f ppm'%(1.e6*mean_abs_daresidual))
     print('Mean Syn. Data Uncertainty = %.0f ppm'%(1.e6*np.mean(syn_errs)))
     print('Flux Scatter = %.0f ppm'%(scatter))
-
+    print('\n')
     print('In-transit residuals:')
     print('Mean Asym. Model - Homog. Model residual = %.0f ppm'%(1.e6*mean_ahresidual_it))
     print('    mean abs. above = %.0f ppm'%(1.e6*mean_abs_ahresidual_it))
@@ -362,6 +368,12 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('    mean abs above = %.0f ppm'%(1.e6*mean_abs_daresidual_it))
     print('Mean Syn. Data Uncertainty = %.0f ppm'%(1.e6*np.mean(syn_errs[idxs_intransit])))
     print('Flux Scatter = %.0f ppm'%(scatter))
+    print('\n')
+    print('Max residuals:')
+    print('Max Asym. Model - Homog. Model residual = %.0f ppm'%(1.e6*max_ahresidual))
+    print('Max Data - Asym. Model residual = %.0f ppm'%(1.e6*max_dhresidual))
+    print('Max Data - Asym. Model residual = %.0f ppm'%(1.e6*max_daresidual))
+
 
     ## make figure showing the lightcurves and residuals
     fig1, ax1 = plt.subplots(figsize=(10,6), nrows=2, sharex=True)
