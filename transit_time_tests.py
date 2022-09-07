@@ -11,7 +11,7 @@ import os, sys
 ## Define the output file and destiations for outputting figures
 ## Parameters that are used in the code and also for naming:
 runN = 1
-Ntransits_ahead = 2000 # N transits ahead of lit. transit time to place our new data
+Ntransits_ahead = 10000 # N transits ahead of lit. transit time to place our new data
                          # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
 scatter = 50. # [ppm], standard deviation of flux values about the model
 output_file_path = './run'+str(runN)+'_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'.txt'
@@ -334,9 +334,14 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('True ln Likelihood = ', true_lnLikelihood)
     print('True BIC = ', true_bic)
     print('True reduced chi2 = ', true_chi2red)
-    bayes_factor = true_lnLikelihood / bf_lnLikelihood
+    lnLdiff = true_lnLikelihood - bf_lnLikelihood
+    # try to avoid overflows when computing exp for bayes factor:
+    if lnLdiff >= 100:
+        bayes_factor = np.inf
+    else:
+        bayes_factor = np.exp(lnLdiff)
     # if bayes_factor <= 1 - homog model preferred or can't be ruled out
-    print('Bayes factor = ', bayes_factor)
+    print('Bayes factor = exp(lnL_asym - lnL_homog) =  ', bayes_factor)
     if bayes_factor >= 2.0:
         print('    this prefers the asymmetric model!')
         print('    so asymmetry may be retrieved given these parameters')
