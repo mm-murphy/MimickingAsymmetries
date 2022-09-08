@@ -14,8 +14,17 @@ runN = 1
 Ntransits_ahead = 10000 # N transits ahead of lit. transit time to place our new data
                          # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
 scatter = 50. # [ppm], standard deviation of flux values about the model
-output_file_path = './run'+str(runN)+'_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'.txt'
-figure_output_path = './figures/synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'/'
+output_file_path = './output_files/run'+str(runN)+'_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC.txt'
+figure_output_path = './figures/synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC/'
+array_output_path = './output_arrays/synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC'
+
+# print save locations to console
+print('verbose output log will be saved to ', output_file_path)
+print('figures will be saved to ', figure_output_path)
+print('key results array will be saved to', array_output_path)
+
+
+
 
 # create the file/directory if it doesn't exist already
 output_file_exists = os.path.isfile(output_file_path)
@@ -35,6 +44,7 @@ else:
 fig_dir_exists = os.path.isdir(figure_output_path)
 if not fig_dir_exists:
     os.mkdir(figure_output_path)
+
 
 ## toggle to send all print statements to the output file
 print_all_to_file = True
@@ -65,6 +75,17 @@ lit_params = {
     'u2':np.array([0.2952, 0.5, 'unitless', 'Claret+ 2011 tabulation'], dtype=object), # note: this uncertainty set arbitrarily
     'T14':np.array([2.4264, 0.0264, 'hours', 'Hellier 2014'], dtype=object)
 }
+
+## customize any parameters here:
+# LD coeffs for scen B
+#lit_params['u1'] = np.array([0.25, 0.5, 'unitless', 'custom'], dtype=object)
+#lit_params['u2'] = np.array([0.45, 0.5, 'unitless', 'custom'], dtype=object)
+# LD coeffs for scen A
+lit_params['u1'] = np.array([0.4, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u1'] = np.array([0.6, 0.5, 'unitless', 'custom'], dtype=object)
+
+
+
 
 ### Load in data OR set up synthetic observations
 ##      (synthetic observations will start here but finish being set up later in the code)
@@ -99,6 +120,10 @@ else:
 ##   note: as of right now, the factor is defined the number of scale heights by which the two radii differ
 asymmetry_factors_totest = np.array([1., 3., 5., 7.5, 10., 15., 20., 25., 30., 35., 40., 45., 50.])
 print('Testing asymmetry factors: ', asymmetry_factors_totest)
+
+print('parameters being used:')
+for key in lit_params:
+    print(key, lit_params[key])
 
 # create array of trailing limb RpRs vals (always the same value = the literature value)
 rprs1_vals = np.ones(asymmetry_factors_totest.shape) * lit_params['RpRs'][0] 
@@ -209,6 +234,12 @@ def lnPosterior(theta, flux, flux_errors, info_dict, init_transitmodel, rprs_hom
 
     return lnPost
 
+## defining arrays of quantities to save
+t0_diff_seconds_arr = np.array([])
+t0_diff_seconds_err_arr = np.array([])
+chi2red_homog_arr = np.array([])
+chi2red_asym_arr = np.array([])
+fasym_arr = np.copy(asymmetry_factors_totest)
 
 print('Entering MCMC loop ...')
 ## Now going into the script loop
@@ -275,13 +306,13 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
         sampler = emcee.EnsembleSampler(Nwalkers, Nparams, lnPosterior, pool=pool, 
                                      args=(syn_fluxes, syn_errs, fit_pars, InitHomogModel, rprs_homog))
         state = sampler.run_mcmc(pos, Nsteps, progress=True)
-    print(' ... complete')
+    #print(' ... complete')
     # grab the outputs
     samples = sampler.get_chain(discard=Nburn)
     flatsamples = sampler.get_chain(discard=Nburn, flat=True)
     loglikelihoods = sampler.get_log_prob(discard=Nburn, flat=True)
     autocorrtimes = sampler.get_autocorr_time()
-    print('sampler outputs grabbed')
+    #print('sampler outputs grabbed')
 
 
     param_fits = np.asarray([np.median(flatsamples[:,i]) for i in range(samples.shape[2])])
@@ -380,6 +411,13 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('Max Data - Asym. Model residual = %.0f ppm'%(1.e6*max_daresidual))
 
 
+    ## append results to our output arrays
+    t0_diff_seconds_arr = np.append(t0_diff_seconds_arr, (tdiff*24.*60.*60.))
+    t0_diff_seconds_err_arr = np.append(t0_diff_seconds_err_arr, (param_errs[0]*24.*60.*60.))
+    chi2red_homog_arr = np.append(chi2red_homog_arr, bf_chi2red)
+    chi2red_asym_arr = np.append(chi2red_asym_arr, true_chi2red)
+
+
     ## make figure showing the lightcurves and residuals
     fig1, ax1 = plt.subplots(figsize=(10,6), nrows=2, sharex=True)
     plt.subplots_adjust(hspace=0.15)
@@ -420,8 +458,16 @@ for i_factor, asym_factor in enumerate(asymmetry_factors_totest):
     print('---------------------')
     print('\n')
 
+output_arr_name = array_output_path+'keyoutputs.npz'
+np.savez(output_arr_name, 
+        fasyms=fasym_arr,
+        tdiff_seconds=t0_diff_seconds_arr, tdiff_err_seconds=t0_diff_seconds_err_arr,
+        chi2red_homog=chi2red_homog_arr, chi2red_asym=chi2red_asym_arr)
 
-
+# print save locations to verbose output log
+print('verbose output log saved to ', output_file_path)
+print('figures saved to ', figure_output_path)
+print('key results array saved to', output_arr_name)
 
 
 print('ran fine')
