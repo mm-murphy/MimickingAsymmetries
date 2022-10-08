@@ -11,12 +11,12 @@ import os, sys
 ## Define the output file and destiations for outputting figures
 ## Parameters that are used in the code and also for naming:
 runN = 1
-Ntransits_ahead = 10000 # N transits ahead of lit. transit time to place our new data
+Ntransits_ahead = 1000 # N transits ahead of lit. transit time to place our new data
                          # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
-scatter = 50. # [ppm], standard deviation of flux values about the model
-output_file_path = './output_files/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenA.txt'
-figure_output_path = './figures/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenA/'
-array_output_path = './output_arrays/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenA'
+scatter = 100. # [ppm], standard deviation of flux values about the model
+output_file_path = './output_files/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenB_nircCadence.txt'
+figure_output_path = './figures/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenB_nircCadence/'
+array_output_path = './output_arrays/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenB_nircCadence'
 
 # print save locations to console
 print('verbose output log will be saved to ', output_file_path)
@@ -78,8 +78,8 @@ lit_params = {
 
 ## customize any parameters here:
 # LD coeffs for scen B
-#lit_params['u1'] = np.array([0.25, 0.5, 'unitless', 'custom'], dtype=object)
-#lit_params['u2'] = np.array([0.45, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u1'] = np.array([0.25, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u2'] = np.array([0.45, 0.5, 'unitless', 'custom'], dtype=object)
 # LD coeffs for scen C
 #lit_params['u1'] = np.array([0.4, 0.5, 'unitless', 'custom'], dtype=object)
 #lit_params['u1'] = np.array([0.6, 0.5, 'unitless', 'custom'], dtype=object)
@@ -104,10 +104,12 @@ else:
     t0_new_true = t0_true + Ntransits_ahead*P_true  # 'True' propagated transit time, just set to prev. measured ephemeris propagated forward
     t0_new_guess = t0_true + Ntransits_ahead*P_true # our guess of what the new transit time would be, based on prev. measured ephemeris
     t0_new_guess_uncertainty = np.sqrt( (lit_params['t0'][1]**2) + (Ntransits_ahead**2)*(lit_params['P'][1]**2))
-    obs_window_size = 3. # [hours] before/after the transit midpoint to generate a model for
-    Ndatapoints = 350    # number of light curve points
+    obs_window_size = 2.*lit_params['T14'][0] # [hours] before/after the transit midpoint to generate a model for
+    #Ndatapoints = 350    # number of light curve points
+    tint=17.5
     # generate time axis
-    time = np.linspace(t0_new_true-obs_window_size/24., t0_new_true+obs_window_size/24., Ndatapoints)
+#    time = np.linspace(t0_new_true-obs_window_size/24., t0_new_true+obs_window_size/24., Ndatapoints)
+    time = np.arange((t0_new_true-obs_window_size/24.), (t0_new_true + obs_window_size/24.), (tint/60./60./24.))
     idxs_intransit = np.where((time >= (t0_new_true - 0.5*lit_params['T14'][0]/24.)) & (time <= (t0_new_true + 0.5*lit_params['T14'][0]/24.)))[0]
     # initialize arrays for the flux and flux uncertainty, which will be set later on
     syn_fluxes, syn_errs = np.ones(time.shape), np.ones(time.shape)
