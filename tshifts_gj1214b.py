@@ -14,9 +14,9 @@ runN = 1
 Ntransits_ahead = 1000 # N transits ahead of lit. transit time to place our new data
                          # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
 scatter = 100. # [ppm], standard deviation of flux values about the model
-output_file_path = './output_files/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenB_nircCadence.txt'
-figure_output_path = './figures/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenB_nircCadence/'
-array_output_path = './output_arrays/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenB_nircCadence'
+output_file_path = './output_files/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC_nircCadence.txt'
+figure_output_path = './figures/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC_nircCadence/'
+array_output_path = './output_arrays/gj1214b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC_nircCadence'
 
 # print save locations to console
 print('verbose output log will be saved to ', output_file_path)
@@ -78,11 +78,11 @@ lit_params = {
 
 ## customize any parameters here:
 # LD coeffs for scen B
-lit_params['u1'] = np.array([0.25, 0.5, 'unitless', 'custom'], dtype=object)
-lit_params['u2'] = np.array([0.45, 0.5, 'unitless', 'custom'], dtype=object)
+#lit_params['u1'] = np.array([0.25, 0.5, 'unitless', 'custom'], dtype=object)
+#lit_params['u2'] = np.array([0.45, 0.5, 'unitless', 'custom'], dtype=object)
 # LD coeffs for scen C
-#lit_params['u1'] = np.array([0.4, 0.5, 'unitless', 'custom'], dtype=object)
-#lit_params['u1'] = np.array([0.6, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u1'] = np.array([0.4, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u1'] = np.array([0.6, 0.5, 'unitless', 'custom'], dtype=object)
 
 
 
