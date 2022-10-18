@@ -34,6 +34,37 @@ def calc_scale_height(T, M, R, mm=2):
     
     return H
 
+def calc_scale_height_error(T, M, R, mm, Terr, Merr, Rerr, mmerr):
+    """ Calculates the uncertainty on the scale height of a planet's atmosphere, using the equation
+     scale height = kT / mg
+    
+    Inputs: [uncertainties of ...] T = the atmospheric temperature in [K]; M = the planet's mass in [Mjupiter]; 
+            R = the planet's radius in [Rjupiter]; mm = mean mass of a molecule in the atmosphere [amu], this is
+                   default set to 1 amu = 1 proton mass (for now)
+    Outputs: H = uncertainty on the scale height in [km]
+    """
+    # constants:
+    amu = 1.67e-27 # [kg]; atomic mass unit in [kg]
+    k = 1.38e-23 # [Joule/K]; Boltzmann constant
+    G = 6.674e-11 # [m^3/kg/s^2]; Gravitational constant
+    Mjupiter = 1.9e27 # [kg]; mass of Jupiter
+    Rjupiter = 69911000.0 # [m]; approx. radius of Jupiter
+    
+    M_kg, R_m = M*Mjupiter, R*Rjupiter # convert planet quantities into SI units
+    Merr_kg, Rerr_m = Merr*Mjupiter, Rerr*Rjupiter
+    g = G*M_kg/(R_m**2) # gravitational acceleration in [m/s^2]
+    meanmass = mm*amu
+    meanmasserr = mmerr*amu
+    
+    err_g_squared = (G**2 / R_m**4)*(Merr_kg**2 + 4.*(M_kg**2)*(Rerr_m**2)/(R_m**2))
+    
+    err_H_term1 = k/(meanmass*g)
+    err_H_term2 = Terr**2 + (T**2 / meanmass**2)*(meanmasserr**2) + (T**2 / g**2)*err_g_squared
+    err_H = err_H_term1 * np.sqrt(err_H_term2) # in [m]
+    err_H /= 1000. # convert into [km] from [m]
+    return err_H
+    
+
 def convert_rprs_to_rpJ(rprs, rs):
     """ Converts the planet-star radius ratio into the planet's radius in Jupiter radii
     Inputs: rprs = planet-star radius ratio; rs = stellar radius in [Rsun]
