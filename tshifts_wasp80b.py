@@ -14,9 +14,9 @@ runN = 1
 Ntransits_ahead = 1000 # N transits ahead of lit. transit time to place our new data
                          # this will factor into the ephemeris uncertainty, as it grows with sqrt(N) [i think]
 scatter = 100. # [ppm], standard deviation of flux values about the model
-output_file_path = './output_files/wasp80b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenA_nircCadence.txt'
-figure_output_path = './figures/wasp80b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenA_nircCadence/'
-array_output_path = './output_arrays/wasp80b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenA_nircCadence'
+output_file_path = './output_files/wasp80b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC_nircCadence.txt'
+figure_output_path = './figures/wasp80b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC_nircCadence/'
+array_output_path = './output_arrays/wasp80b_synth_scatter'+str(int(scatter))+'_ahead'+str(int(Ntransits_ahead))+'LDscenC_nircCadence'
 
 # print save locations to console
 print('verbose output log will be saved to ', output_file_path)
@@ -81,8 +81,8 @@ lit_params = {
 #lit_params['u1'] = np.array([0.25, 0.5, 'unitless', 'custom'], dtype=object)
 #lit_params['u2'] = np.array([0.45, 0.5, 'unitless', 'custom'], dtype=object)
 # LD coeffs for scen C
-#lit_params['u1'] = np.array([0.4, 0.5, 'unitless', 'custom'], dtype=object)
-#lit_params['u1'] = np.array([0.6, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u1'] = np.array([0.4, 0.5, 'unitless', 'custom'], dtype=object)
+lit_params['u1'] = np.array([0.6, 0.5, 'unitless', 'custom'], dtype=object)
 
 
 
@@ -136,7 +136,7 @@ for i_factor, asymfactor in enumerate(asymmetry_factors_totest):
     # compute trailing limb radius in [Rjupiter]
     this_rp1 = convert_rprs_to_rpJ(rprs1_vals[i_factor], lit_params['Rs'][0]) 
     # compute corresponding scale height in [km]
-    this_H1 = calc_scale_height(lit_params['Teq'][0], lit_params['Mp'][0], this_rp1, mm=2.5)
+    this_H1 = calc_scale_height(lit_params['Teq'][0], lit_params['Mp'][0], this_rp1, mm=2.3)
     # convert this scale height into [Rjupiter]
     this_H1_rJ = convert_km_to_rpJ(this_H1)
     # using the pre-defined asymmetry factor, compute the leading limb's radius in [Rjupiter]
@@ -193,7 +193,7 @@ fit_pars = {
     'Prior':{
         # Bayesian priors
         # 0 = prior value or prior bounds if type = uniform, 1 = prior error (also initialization ball size), 2 = prior type
-        't0':np.array([(t0_new_guess - t0_new_guess_uncertainty, t0_new_guess + t0_new_guess_uncertainty), lit_params['t0'][1], 'U'], dtype=object)
+        't0':np.array([(t0_new_guess - 100.*t0_new_guess_uncertainty, t0_new_guess + 100.*t0_new_guess_uncertainty), lit_params['t0'][1], 'U'], dtype=object)
     }
 }
 
