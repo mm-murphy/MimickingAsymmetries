@@ -24,63 +24,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55819886]
- [2462536.55822738]
- [2462536.55832695]]
+[[2462536.55810076]
+ [2462536.55814284]
+ [2462536.55818921]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1907.363486880211
-Initial ln Posterior =  1907.363486880211
+Initial ln Likelihood =  1903.6855945433704
+Initial ln Posterior =  1903.6855945433704
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55815014]
-errors =  [3.03983688e-05]
+Best fit parameters =  [2462536.55817181]
+errors =  [3.00754327e-05]
 True t0 was =  2462536.5582000003
-1.64 sigma difference
-time difference = -0.071805 minutes
-auto correlation times =  [34.36793562]
+0.94 sigma difference
+time difference = -0.040589 minutes
+auto correlation times =  [41.73926593]
 Final ln Prior =  0.0
-Final ln Likelihood =  1908.6658743701732
-Final ln Posterior =  1908.6658743701732
-Final BIC =  -3811.838687297006
-Final reduced chi2 =  0.8736195263481766
+Final ln Likelihood =  1904.1309008154426
+Final ln Posterior =  1904.1309008154426
+Final BIC =  -3802.7687401875446
+Final reduced chi2 =  0.9109444115722988
 
 
 For the true asymmetric model:
-True ln Likelihood =  1908.3501914322896
-True BIC =  -3811.2073214212387
-True reduced chi2 =  0.8762177398287027
-Bayes factor = exp(lnL_asym - lnL_homog) =   0.7292906439493381
+True ln Likelihood =  1903.9171877937915
+True BIC =  -3802.3413141442425
+True reduced chi2 =  0.9127033664830069
+Bayes factor = exp(lnL_asym - lnL_homog) =   0.8075801097776267
     homogeneous model cannot be ruled out
     asymmetry may not be retrieved given these parameters
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 1 ppm
-Mean Syn. Data - Homog. Model residual = 5 ppm
-    mean abs above = 75 ppm
-Mean Syn. Data - Asym. Model residual = 5 ppm
-    mean abs above = 75 ppm
+    mean abs. above = 0 ppm
+Mean Syn. Data - Homog. Model residual = 6 ppm
+    mean abs above = 79 ppm
+Mean Syn. Data - Asym. Model residual = 6 ppm
+    mean abs above = 79 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 5 ppm
-Mean Syn. Data - Homog. Model residual = 35 ppm
-    mean abs above = 71 ppm
-Mean Syn. Data - Asym. Model residual = 35 ppm
-    mean abs above = 72 ppm
+    mean abs. above = 1 ppm
+Mean Syn. Data - Homog. Model residual = 1 ppm
+    mean abs above = 77 ppm
+Mean Syn. Data - Asym. Model residual = 2 ppm
+    mean abs above = 77 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 19 ppm
-Max Data - Asym. Model residual = 279 ppm
-Max Data - Asym. Model residual = 279 ppm
+Max Asym. Model - Homog. Model residual = 5 ppm
+Max Data - Asym. Model residual = 295 ppm
+Max Data - Asym. Model residual = 295 ppm
 
 
 ---------------------
@@ -93,63 +93,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55816504]
- [2462536.55806508]
- [2462536.55826396]]
+[[2462536.55822409]
+ [2462536.55822847]
+ [2462536.55818928]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1871.0794683857462
-Initial ln Posterior =  1871.0794683857462
+Initial ln Likelihood =  1902.2134733832318
+Initial ln Posterior =  1902.2134733832318
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.5580814]
-errors =  [2.98598316e-05]
+Best fit parameters =  [2462536.55809709]
+errors =  [2.97813676e-05]
 True t0 was =  2462536.5582000003
-3.97 sigma difference
-time difference = -0.170782 minutes
-auto correlation times =  [39.64847208]
+3.46 sigma difference
+time difference = -0.148193 minutes
+auto correlation times =  [35.89542417]
 Final ln Prior =  0.0
-Final ln Likelihood =  1878.6159901566484
-Final ln Posterior =  1878.6159901566484
-Final BIC =  -3751.7389188699563
-Final reduced chi2 =  1.1209436762537324
+Final ln Likelihood =  1907.9373608363376
+Final ln Posterior =  1907.9373608363376
+Final BIC =  -3810.3816602293346
+Final reduced chi2 =  0.8796155225114347
 
 
 For the true asymmetric model:
-True ln Likelihood =  1878.9412260463082
-True BIC =  -3752.389390649276
-True reduced chi2 =  1.1182668376557094
-Bayes factor = exp(lnL_asym - lnL_homog) =   1.384357163008438
+True ln Likelihood =  1908.1382697185265
+True BIC =  -3810.7834779937125
+True reduced chi2 =  0.8779619514646116
+Bayes factor = exp(lnL_asym - lnL_homog) =   1.2225133740056462
     this prefers the asymmetric model
     evidence is only slight though
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 2 ppm
+    mean abs. above = 1 ppm
 Mean Syn. Data - Homog. Model residual = 4 ppm
-    mean abs above = 83 ppm
-Mean Syn. Data - Asym. Model residual = 4 ppm
-    mean abs above = 83 ppm
+    mean abs above = 76 ppm
+Mean Syn. Data - Asym. Model residual = 5 ppm
+    mean abs above = 76 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 7 ppm
-Mean Syn. Data - Homog. Model residual = -12 ppm
-    mean abs above = 90 ppm
-Mean Syn. Data - Asym. Model residual = -12 ppm
-    mean abs above = 90 ppm
+    mean abs. above = 3 ppm
+Mean Syn. Data - Homog. Model residual = 2 ppm
+    mean abs above = 80 ppm
+Mean Syn. Data - Asym. Model residual = 2 ppm
+    mean abs above = 80 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 30 ppm
-Max Data - Asym. Model residual = 321 ppm
-Max Data - Asym. Model residual = 321 ppm
+Max Asym. Model - Homog. Model residual = 17 ppm
+Max Data - Asym. Model residual = 281 ppm
+Max Data - Asym. Model residual = 282 ppm
 
 
 ---------------------
@@ -162,63 +162,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55827166]
- [2462536.55817817]
- [2462536.55840781]]
+[[2462536.55826114]
+ [2462536.55827654]
+ [2462536.558215  ]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1873.2300751472649
-Initial ln Posterior =  1873.2300751472649
+Initial ln Likelihood =  1873.2334491392144
+Initial ln Posterior =  1873.2334491392144
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.558038]
-errors =  [2.91459728e-05]
+Best fit parameters =  [2462536.55800545]
+errors =  [2.89452728e-05]
 True t0 was =  2462536.5582000003
-5.56 sigma difference
-time difference = -0.233283 minutes
-auto correlation times =  [37.83061848]
+6.72 sigma difference
+time difference = -0.280146 minutes
+auto correlation times =  [38.6722676]
 Final ln Prior =  0.0
-Final ln Likelihood =  1887.764299852316
-Final ln Posterior =  1887.764299852316
-Final BIC =  -3770.0355382612915
-Final reduced chi2 =  1.0456489462482363
+Final ln Likelihood =  1894.5436276440837
+Final ln Posterior =  1894.5436276440837
+Final BIC =  -3783.594193844827
+Final reduced chi2 =  0.989852009690478
 
 
 For the true asymmetric model:
-True ln Likelihood =  1888.0721604743576
-True BIC =  -3770.6512595053746
-True reduced chi2 =  1.0431151139680581
-Bayes factor = exp(lnL_asym - lnL_homog) =   1.360511350427227
-    this prefers the asymmetric model
-    evidence is only slight though
+True ln Likelihood =  1892.8624582183202
+True BIC =  -3780.2318549932997
+True reduced chi2 =  1.0036887950877071
+Bayes factor = exp(lnL_asym - lnL_homog) =   0.18615615289899823
+    homogeneous model cannot be ruled out
+    asymmetry may not be retrieved given these parameters
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 1 ppm
-Mean Syn. Data - Homog. Model residual = 12 ppm
-    mean abs above = 82 ppm
-Mean Syn. Data - Asym. Model residual = 12 ppm
-    mean abs above = 81 ppm
+    mean abs. above = 3 ppm
+Mean Syn. Data - Homog. Model residual = -1 ppm
+    mean abs above = 78 ppm
+Mean Syn. Data - Asym. Model residual = -1 ppm
+    mean abs above = 78 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 4 ppm
-Mean Syn. Data - Homog. Model residual = 3 ppm
-    mean abs above = 82 ppm
-Mean Syn. Data - Asym. Model residual = 3 ppm
+    mean abs. above = 12 ppm
+Mean Syn. Data - Homog. Model residual = 11 ppm
+    mean abs above = 79 ppm
+Mean Syn. Data - Asym. Model residual = 11 ppm
     mean abs above = 80 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 21 ppm
-Max Data - Asym. Model residual = 331 ppm
-Max Data - Asym. Model residual = 331 ppm
+Max Asym. Model - Homog. Model residual = 47 ppm
+Max Data - Asym. Model residual = 302 ppm
+Max Data - Asym. Model residual = 302 ppm
 
 
 ---------------------
@@ -231,63 +231,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.5581771 ]
- [2462536.55823652]
- [2462536.55819743]]
+[[2462536.55821843]
+ [2462536.55833464]
+ [2462536.55811874]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1843.8611245065676
-Initial ln Posterior =  1843.8611245065676
+Initial ln Likelihood =  1864.9552660985073
+Initial ln Posterior =  1864.9552660985073
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55793498]
-errors =  [2.93317717e-05]
+Best fit parameters =  [2462536.55796476]
+errors =  [2.89746094e-05]
 True t0 was =  2462536.5582000003
-9.04 sigma difference
-time difference = -0.381631 minutes
-auto correlation times =  [33.09337623]
+8.12 sigma difference
+time difference = -0.338745 minutes
+auto correlation times =  [34.40151671]
 Final ln Prior =  0.0
-Final ln Likelihood =  1883.7999858401704
-Final ln Posterior =  1883.7999858401704
-Final BIC =  -3762.106910237
-Final reduced chi2 =  1.0782770451136343
+Final ln Likelihood =  1896.3913855785459
+Final ln Posterior =  1896.3913855785459
+Final BIC =  -3787.289709713751
+Final reduced chi2 =  0.974644125456223
 
 
 For the true asymmetric model:
-True ln Likelihood =  1883.584600748636
-True BIC =  -3761.6761400539312
-True reduced chi2 =  1.0800497619163878
-Bayes factor = exp(lnL_asym - lnL_homog) =   0.806230907692067
-    homogeneous model cannot be ruled out
-    asymmetry may not be retrieved given these parameters
+True ln Likelihood =  1897.034491408578
+True BIC =  -3788.5759213738156
+True reduced chi2 =  0.9693510733571924
+Bayes factor = exp(lnL_asym - lnL_homog) =   1.9023801829505649
+    this prefers the asymmetric model
+    evidence is only slight though
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 3 ppm
-Mean Syn. Data - Homog. Model residual = 4 ppm
-    mean abs above = 84 ppm
-Mean Syn. Data - Asym. Model residual = 4 ppm
-    mean abs above = 84 ppm
+    mean abs. above = 1 ppm
+Mean Syn. Data - Homog. Model residual = 3 ppm
+    mean abs above = 79 ppm
+Mean Syn. Data - Asym. Model residual = 3 ppm
+    mean abs above = 79 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 10 ppm
-Mean Syn. Data - Homog. Model residual = 10 ppm
-    mean abs above = 73 ppm
-Mean Syn. Data - Asym. Model residual = 10 ppm
-    mean abs above = 72 ppm
+    mean abs. above = 5 ppm
+Mean Syn. Data - Homog. Model residual = 5 ppm
+    mean abs above = 64 ppm
+Mean Syn. Data - Asym. Model residual = 5 ppm
+    mean abs above = 64 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 49 ppm
-Max Data - Asym. Model residual = 294 ppm
-Max Data - Asym. Model residual = 294 ppm
+Max Asym. Model - Homog. Model residual = 24 ppm
+Max Data - Asym. Model residual = 278 ppm
+Max Data - Asym. Model residual = 278 ppm
 
 
 ---------------------
@@ -300,63 +300,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55821928]
- [2462536.55809405]
- [2462536.55810089]]
+[[2462536.55811069]
+ [2462536.55815437]
+ [2462536.55827554]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1842.6487904862747
-Initial ln Posterior =  1842.6487904862747
+Initial ln Likelihood =  1837.2827197230752
+Initial ln Posterior =  1837.2827197230752
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55791068]
-errors =  [2.85399146e-05]
+Best fit parameters =  [2462536.55785646]
+errors =  [2.92381737e-05]
 True t0 was =  2462536.5582000003
-10.14 sigma difference
-time difference = -0.416624 minutes
-auto correlation times =  [36.94754821]
+11.75 sigma difference
+time difference = -0.494694 minutes
+auto correlation times =  [40.89197935]
 Final ln Prior =  0.0
-Final ln Likelihood =  1891.884944754543
-Final ln Posterior =  1891.884944754543
-Final BIC =  -3778.2768280657456
-Final reduced chi2 =  1.0117341733904015
+Final ln Likelihood =  1907.067147069787
+Final ln Posterior =  1907.067147069787
+Final BIC =  -3808.6412326962336
+Final reduced chi2 =  0.8867777757340712
 
 
 For the true asymmetric model:
-True ln Likelihood =  1892.403364145376
-True BIC =  -3779.3136668474112
-True reduced chi2 =  1.0074673471284017
-Bayes factor = exp(lnL_asym - lnL_homog) =   1.67937112139591
+True ln Likelihood =  1907.4720792710261
+True BIC =  -3809.4510970987117
+True reduced chi2 =  0.8834450004152327
+Bayes factor = exp(lnL_asym - lnL_homog) =   1.499200852650774
     this prefers the asymmetric model
     evidence is only slight though
 
 
 Full array residuals:
-Mean Asym. Model - Homog. Model residual = 0 ppm
-    mean abs. above = 2 ppm
-Mean Syn. Data - Homog. Model residual = 4 ppm
-    mean abs above = 81 ppm
-Mean Syn. Data - Asym. Model residual = 4 ppm
-    mean abs above = 81 ppm
+Mean Asym. Model - Homog. Model residual = -0 ppm
+    mean abs. above = 3 ppm
+Mean Syn. Data - Homog. Model residual = -3 ppm
+    mean abs above = 73 ppm
+Mean Syn. Data - Asym. Model residual = -3 ppm
+    mean abs above = 73 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = -0 ppm
-    mean abs. above = 7 ppm
-Mean Syn. Data - Homog. Model residual = -10 ppm
-    mean abs above = 79 ppm
-Mean Syn. Data - Asym. Model residual = -10 ppm
-    mean abs above = 79 ppm
+    mean abs. above = 12 ppm
+Mean Syn. Data - Homog. Model residual = -9 ppm
+    mean abs above = 65 ppm
+Mean Syn. Data - Asym. Model residual = -9 ppm
+    mean abs above = 66 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 42 ppm
-Max Data - Asym. Model residual = 286 ppm
-Max Data - Asym. Model residual = 286 ppm
+Max Asym. Model - Homog. Model residual = 57 ppm
+Max Data - Asym. Model residual = 270 ppm
+Max Data - Asym. Model residual = 271 ppm
 
 
 ---------------------
@@ -369,44 +369,45 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55830113]
- [2462536.55821368]
- [2462536.55800339]]
+[[2462536.55831057]
+ [2462536.55818753]
+ [2462536.55824406]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1771.717639722546
-Initial ln Posterior =  1771.717639722546
+Initial ln Likelihood =  1758.1257235878488
+Initial ln Posterior =  1758.1257235878488
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55775344]
-errors =  [2.76975334e-05]
+Best fit parameters =  [2462536.55774666]
+errors =  [2.81697139e-05]
 True t0 was =  2462536.5582000003
-16.12 sigma difference
-time difference = -0.643046 minutes
-auto correlation times =  [36.64267692]
+16.09 sigma difference
+time difference = -0.652817 minutes
+auto correlation times =  [33.53000715]
 Final ln Prior =  0.0
-Final ln Likelihood =  1894.755477425071
-Final ln Posterior =  1894.755477425071
-Final BIC =  -3784.0178934068012
-Final reduced chi2 =  0.9881083900938777
+Final ln Likelihood =  1885.0984231674097
+Final ln Posterior =  1885.0984231674097
+Final BIC =  -3764.703784891479
+Final reduced chi2 =  1.0675903181404711
 
 
 For the true asymmetric model:
-True ln Likelihood =  1895.396182077857
-True BIC =  -3785.2993027123734
-True reduced chi2 =  0.9828351007705346
-Bayes factor = exp(lnL_asym - lnL_homog) =   1.8978177107860346
-    this prefers the asymmetric model
-    evidence is only slight though
+True ln Likelihood =  1886.4854436720238
+True BIC =  -3767.477825900707
+True reduced chi2 =  1.0561745115181302
+Bayes factor = exp(lnL_asym - lnL_homog) =   4.002905628801114
+    this prefers the asymmetric model!
+    so asymmetry may be retrieved given these parameters
+    must manually decide whether this evidence is strong enough
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 0 ppm
     mean abs. above = 3 ppm
-Mean Syn. Data - Homog. Model residual = -8 ppm
-    mean abs above = 80 ppm
-Mean Syn. Data - Asym. Model residual = -8 ppm
-    mean abs above = 80 ppm
+Mean Syn. Data - Homog. Model residual = -17 ppm
+    mean abs above = 82 ppm
+Mean Syn. Data - Asym. Model residual = -17 ppm
+    mean abs above = 82 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
@@ -414,18 +415,18 @@ Flux Scatter = 100 ppm
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = 0 ppm
     mean abs. above = 10 ppm
-Mean Syn. Data - Homog. Model residual = -8 ppm
-    mean abs above = 73 ppm
-Mean Syn. Data - Asym. Model residual = -8 ppm
-    mean abs above = 71 ppm
+Mean Syn. Data - Homog. Model residual = -12 ppm
+    mean abs above = 87 ppm
+Mean Syn. Data - Asym. Model residual = -12 ppm
+    mean abs above = 86 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 61 ppm
-Max Data - Asym. Model residual = 339 ppm
-Max Data - Asym. Model residual = 339 ppm
+Max Asym. Model - Homog. Model residual = 57 ppm
+Max Data - Asym. Model residual = 290 ppm
+Max Data - Asym. Model residual = 290 ppm
 
 
 ---------------------
@@ -438,64 +439,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55821919]
- [2462536.55827478]
- [2462536.55810404]]
+[[2462536.55813686]
+ [2462536.55816   ]
+ [2462536.55814676]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1679.496318725522
-Initial ln Posterior =  1679.496318725522
+Initial ln Likelihood =  1650.1632061278028
+Initial ln Posterior =  1650.1632061278028
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55763362]
-errors =  [2.6933616e-05]
+Best fit parameters =  [2462536.55758162]
+errors =  [2.77601648e-05]
 True t0 was =  2462536.5582000003
-21.03 sigma difference
-time difference = -0.815581 minutes
-auto correlation times =  [35.11916567]
+22.28 sigma difference
+time difference = -0.890473 minutes
+auto correlation times =  [36.24538355]
 Final ln Prior =  0.0
-Final ln Likelihood =  1889.8020988664753
-Final ln Posterior =  1889.8020988664753
-Final BIC =  -3774.11113628961
-Final reduced chi2 =  1.0288769379012481
+Final ln Likelihood =  1898.669645866159
+Final ln Posterior =  1898.669645866159
+Final BIC =  -3791.8462302889775
+Final reduced chi2 =  0.955893011977926
 
 
 For the true asymmetric model:
-True ln Likelihood =  1892.6345321459285
-True BIC =  -3779.7760028485163
-True reduced chi2 =  1.0055647298399029
-Bayes factor = exp(lnL_asym - lnL_homog) =   16.986744072660734
-    this prefers the asymmetric model!
-    so asymmetry may be retrieved given these parameters
-    must manually decide whether this evidence is strong enough
+True ln Likelihood =  1898.2666221789395
+True BIC =  -3791.0401829145385
+True reduced chi2 =  0.9592100793624458
+Bayes factor = exp(lnL_asym - lnL_homog) =   0.6682962690556561
+    homogeneous model cannot be ruled out
+    asymmetry may not be retrieved given these parameters
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 0 ppm
     mean abs. above = 4 ppm
-Mean Syn. Data - Homog. Model residual = -6 ppm
-    mean abs above = 82 ppm
-Mean Syn. Data - Asym. Model residual = -6 ppm
-    mean abs above = 81 ppm
+Mean Syn. Data - Homog. Model residual = -7 ppm
+    mean abs above = 80 ppm
+Mean Syn. Data - Asym. Model residual = -8 ppm
+    mean abs above = 80 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = 1 ppm
-    mean abs. above = 16 ppm
-Mean Syn. Data - Homog. Model residual = -10 ppm
-    mean abs above = 89 ppm
-Mean Syn. Data - Asym. Model residual = -11 ppm
-    mean abs above = 84 ppm
+    mean abs. above = 15 ppm
+Mean Syn. Data - Homog. Model residual = 0 ppm
+    mean abs above = 81 ppm
+Mean Syn. Data - Asym. Model residual = -1 ppm
+    mean abs above = 82 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 102 ppm
-Max Data - Asym. Model residual = 311 ppm
-Max Data - Asym. Model residual = 311 ppm
+Max Asym. Model - Homog. Model residual = 69 ppm
+Max Data - Asym. Model residual = 279 ppm
+Max Data - Asym. Model residual = 279 ppm
 
 
 ---------------------
@@ -508,64 +508,63 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55805722]
- [2462536.55817961]
- [2462536.55823376]]
+[[2462536.55814142]
+ [2462536.55824881]
+ [2462536.55821778]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1512.5509503157175
-Initial ln Posterior =  1512.5509503157175
+Initial ln Likelihood =  1573.5471863513303
+Initial ln Posterior =  1573.5471863513303
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55745282]
-errors =  [2.64705159e-05]
+Best fit parameters =  [2462536.5575048]
+errors =  [2.64155678e-05]
 True t0 was =  2462536.5582000003
-28.23 sigma difference
-time difference = -1.075945 minutes
-auto correlation times =  [34.27203991]
+26.32 sigma difference
+time difference = -1.001084 minutes
+auto correlation times =  [31.59883201]
 Final ln Prior =  0.0
-Final ln Likelihood =  1898.008067444281
-Final ln Posterior =  1898.008067444281
-Final BIC =  -3790.5230734452216
-Final reduced chi2 =  0.9613381018699254
+Final ln Likelihood =  1908.6140443576853
+Final ln Posterior =  1908.6140443576853
+Final BIC =  -3811.73502727203
+Final reduced chi2 =  0.8740461108130985
 
 
 For the true asymmetric model:
-True ln Likelihood =  1899.928018959512
-True BIC =  -3794.3629764756834
-True reduced chi2 =  0.9455360317857179
-Bayes factor = exp(lnL_asym - lnL_homog) =   6.820627764711306
-    this prefers the asymmetric model!
-    so asymmetry may be retrieved given these parameters
-    must manually decide whether this evidence is strong enough
+True ln Likelihood =  1905.4890231563422
+True BIC =  -3805.484984869344
+True reduced chi2 =  0.899766449918803
+Bayes factor = exp(lnL_asym - lnL_homog) =   0.043936002111278114
+    homogeneous model cannot be ruled out
+    asymmetry may not be retrieved given these parameters
 
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 1 ppm
-    mean abs. above = 5 ppm
-Mean Syn. Data - Homog. Model residual = -6 ppm
-    mean abs above = 77 ppm
-Mean Syn. Data - Asym. Model residual = -6 ppm
-    mean abs above = 76 ppm
+    mean abs. above = 6 ppm
+Mean Syn. Data - Homog. Model residual = -4 ppm
+    mean abs above = 74 ppm
+Mean Syn. Data - Asym. Model residual = -4 ppm
+    mean abs above = 75 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
 Mean Asym. Model - Homog. Model residual = 2 ppm
-    mean abs. above = 18 ppm
-Mean Syn. Data - Homog. Model residual = -3 ppm
-    mean abs above = 87 ppm
-Mean Syn. Data - Asym. Model residual = -4 ppm
-    mean abs above = 85 ppm
+    mean abs. above = 22 ppm
+Mean Syn. Data - Homog. Model residual = -7 ppm
+    mean abs above = 82 ppm
+Mean Syn. Data - Asym. Model residual = -8 ppm
+    mean abs above = 84 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 102 ppm
-Max Data - Asym. Model residual = 285 ppm
-Max Data - Asym. Model residual = 285 ppm
+Max Asym. Model - Homog. Model residual = 136 ppm
+Max Data - Asym. Model residual = 311 ppm
+Max Data - Asym. Model residual = 314 ppm
 
 
 ---------------------
@@ -578,33 +577,33 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55814114]
- [2462536.55828928]
- [2462536.55816508]]
+[[2462536.55820813]
+ [2462536.55827594]
+ [2462536.55827999]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1321.742471999844
-Initial ln Posterior =  1321.742471999844
+Initial ln Likelihood =  1332.2639628802478
+Initial ln Posterior =  1332.2639628802478
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55735285]
-errors =  [1.10173132e-05]
+Best fit parameters =  [2462536.55730604]
+errors =  [2.61676032e-05]
 True t0 was =  2462536.5582000003
-76.89 sigma difference
-time difference = -1.219896 minutes
-auto correlation times =  [26.49273649]
+34.16 sigma difference
+time difference = -1.287299 minutes
+auto correlation times =  [29.0046788]
 Final ln Prior =  0.0
-Final ln Likelihood =  1892.075089474181
-Final ln Posterior =  1892.075089474181
-Final BIC =  -3778.6571175050212
-Final reduced chi2 =  1.0101691962740398
+Final ln Likelihood =  1907.939099392749
+Final ln Posterior =  1907.939099392749
+Final BIC =  -3810.3851373421576
+Final reduced chi2 =  0.879601213405166
 
 
 For the true asymmetric model:
-True ln Likelihood =  1897.5763268718015
-True BIC =  -3789.6595923002624
-True reduced chi2 =  0.9648915222195483
-Bayes factor = exp(lnL_asym - lnL_homog) =   244.99490088664567
+True ln Likelihood =  1916.1841614913656
+True BIC =  -3826.8752615393905
+True reduced chi2 =  0.8117406200009135
+Bayes factor = exp(lnL_asym - lnL_homog) =   3808.7719701390383
     this prefers the asymmetric model!
     so asymmetry may be retrieved given these parameters
     must manually decide whether this evidence is strong enough
@@ -612,30 +611,30 @@ Bayes factor = exp(lnL_asym - lnL_homog) =   244.99490088664567
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 1 ppm
-    mean abs. above = 7 ppm
-Mean Syn. Data - Homog. Model residual = -1 ppm
-    mean abs above = 82 ppm
-Mean Syn. Data - Asym. Model residual = -2 ppm
-    mean abs above = 79 ppm
+    mean abs. above = 6 ppm
+Mean Syn. Data - Homog. Model residual = 6 ppm
+    mean abs above = 74 ppm
+Mean Syn. Data - Asym. Model residual = 5 ppm
+    mean abs above = 71 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
-Mean Asym. Model - Homog. Model residual = 4 ppm
-    mean abs. above = 25 ppm
-Mean Syn. Data - Homog. Model residual = 12 ppm
-    mean abs above = 91 ppm
-Mean Syn. Data - Asym. Model residual = 9 ppm
-    mean abs above = 85 ppm
+Mean Asym. Model - Homog. Model residual = 3 ppm
+    mean abs. above = 22 ppm
+Mean Syn. Data - Homog. Model residual = -3 ppm
+    mean abs above = 83 ppm
+Mean Syn. Data - Asym. Model residual = -6 ppm
+    mean abs above = 72 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 154 ppm
-Max Data - Asym. Model residual = 305 ppm
-Max Data - Asym. Model residual = 304 ppm
+Max Asym. Model - Homog. Model residual = 122 ppm
+Max Data - Asym. Model residual = 340 ppm
+Max Data - Asym. Model residual = 276 ppm
 
 
 ---------------------
@@ -648,64 +647,64 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.5582768 ]
- [2462536.55809184]
- [2462536.55831021]]
+[[2462536.55812999]
+ [2462536.55813404]
+ [2462536.55834605]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  1058.5862593702284
-Initial ln Posterior =  1058.5862593702284
+Initial ln Likelihood =  1098.6974817506264
+Initial ln Posterior =  1098.6974817506264
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55734438]
-errors =  [2.67010182e-06]
+Best fit parameters =  [2462536.55718515]
+errors =  [2.52190512e-05]
 True t0 was =  2462536.5582000003
-320.44 sigma difference
-time difference = -1.232089 minutes
-auto correlation times =  [18.89416025]
+40.24 sigma difference
+time difference = -1.461392 minutes
+auto correlation times =  [43.81784669]
 Final ln Prior =  0.0
-Final ln Likelihood =  1876.1125665836425
-Final ln Posterior =  1876.1125665836425
-Final BIC =  -3746.7320717239445
-Final reduced chi2 =  1.141547985496577
+Final ln Likelihood =  1882.5688715104563
+Final ln Posterior =  1882.5688715104563
+Final BIC =  -3759.644681577572
+Final reduced chi2 =  1.0884096733417319
 
 
 For the true asymmetric model:
-True ln Likelihood =  1915.036307376783
-True BIC =  -3824.5795533102255
-True reduced chi2 =  0.8211879789686726
-Bayes factor = exp(lnL_asym - lnL_homog) =   8.023536664096765e+16
+True ln Likelihood =  1886.7214986568092
+True BIC =  -3767.949935870278
+True reduced chi2 =  1.054231672137183
+Bayes factor = exp(lnL_asym - lnL_homog) =   63.600869799979755
     this prefers the asymmetric model!
     so asymmetry may be retrieved given these parameters
     must manually decide whether this evidence is strong enough
 
 
 Full array residuals:
-Mean Asym. Model - Homog. Model residual = 2 ppm
-    mean abs. above = 19 ppm
-Mean Syn. Data - Homog. Model residual = 15 ppm
+Mean Asym. Model - Homog. Model residual = 1 ppm
+    mean abs. above = 8 ppm
+Mean Syn. Data - Homog. Model residual = -15 ppm
     mean abs above = 84 ppm
-Mean Syn. Data - Asym. Model residual = 13 ppm
-    mean abs above = 73 ppm
+Mean Syn. Data - Asym. Model residual = -16 ppm
+    mean abs above = 82 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
-Mean Asym. Model - Homog. Model residual = 6 ppm
-    mean abs. above = 70 ppm
-Mean Syn. Data - Homog. Model residual = 4 ppm
-    mean abs above = 98 ppm
-Mean Syn. Data - Asym. Model residual = -2 ppm
-    mean abs above = 59 ppm
+Mean Asym. Model - Homog. Model residual = 5 ppm
+    mean abs. above = 27 ppm
+Mean Syn. Data - Homog. Model residual = -19 ppm
+    mean abs above = 93 ppm
+Mean Syn. Data - Asym. Model residual = -24 ppm
+    mean abs above = 84 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 272 ppm
-Max Data - Asym. Model residual = 345 ppm
-Max Data - Asym. Model residual = 328 ppm
+Max Asym. Model - Homog. Model residual = 160 ppm
+Max Data - Asym. Model residual = 324 ppm
+Max Data - Asym. Model residual = 324 ppm
 
 
 ---------------------
@@ -718,33 +717,33 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55825791]
- [2462536.55823353]
- [2462536.55821902]]
+[[2462536.55806888]
+ [2462536.55812939]
+ [2462536.55809667]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  816.1981004787931
-Initial ln Posterior =  816.1981004787931
+Initial ln Likelihood =  720.1610942439806
+Initial ln Posterior =  720.1610942439806
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55734353]
-errors =  [1.74040906e-06]
+Best fit parameters =  [2462536.55699533]
+errors =  [2.48532742e-05]
 True t0 was =  2462536.5582000003
-492.11 sigma difference
-time difference = -1.233317 minutes
-auto correlation times =  [33.04780523]
+48.47 sigma difference
+time difference = -1.734725 minutes
+auto correlation times =  [38.0994368]
 Final ln Prior =  0.0
-Final ln Likelihood =  1815.1947669454726
-Final ln Posterior =  1815.1947669454726
-Final BIC =  -3624.8964724476045
-Final reduced chi2 =  1.6429290524774005
+Final ln Likelihood =  1883.559903112279
+Final ln Posterior =  1883.559903112279
+Final BIC =  -3761.6267447812174
+Final reduced chi2 =  1.0802530346436034
 
 
 For the true asymmetric model:
-True ln Likelihood =  1897.8813661570302
-True BIC =  -3790.26967087072
-True reduced chi2 =  0.9623809108184905
-Bayes factor = exp(lnL_asym - lnL_homog) =   8.134554345140922e+35
+True ln Likelihood =  1898.5504886466874
+True BIC =  -3791.6079158500343
+True reduced chi2 =  0.9568737298336558
+Bayes factor = exp(lnL_asym - lnL_homog) =   3238385.737383279
     this prefers the asymmetric model!
     so asymmetry may be retrieved given these parameters
     must manually decide whether this evidence is strong enough
@@ -752,30 +751,30 @@ Bayes factor = exp(lnL_asym - lnL_homog) =   8.134554345140922e+35
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 2 ppm
-    mean abs. above = 34 ppm
-Mean Syn. Data - Homog. Model residual = 6 ppm
-    mean abs above = 95 ppm
-Mean Syn. Data - Asym. Model residual = 4 ppm
-    mean abs above = 76 ppm
+    mean abs. above = 9 ppm
+Mean Syn. Data - Homog. Model residual = 3 ppm
+    mean abs above = 80 ppm
+Mean Syn. Data - Asym. Model residual = 1 ppm
+    mean abs above = 75 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
-Mean Asym. Model - Homog. Model residual = 9 ppm
-    mean abs. above = 122 ppm
+Mean Asym. Model - Homog. Model residual = 7 ppm
+    mean abs. above = 32 ppm
 Mean Syn. Data - Homog. Model residual = 10 ppm
-    mean abs above = 138 ppm
-Mean Syn. Data - Asym. Model residual = 1 ppm
-    mean abs above = 72 ppm
+    mean abs above = 91 ppm
+Mean Syn. Data - Asym. Model residual = 3 ppm
+    mean abs above = 74 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 400 ppm
-Max Data - Asym. Model residual = 446 ppm
-Max Data - Asym. Model residual = 284 ppm
+Max Asym. Model - Homog. Model residual = 165 ppm
+Max Data - Asym. Model residual = 297 ppm
+Max Data - Asym. Model residual = 297 ppm
 
 
 ---------------------
@@ -788,33 +787,33 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55810019]
- [2462536.5581009 ]
- [2462536.5583151 ]]
+[[2462536.55829039]
+ [2462536.55811358]
+ [2462536.55822584]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  262.3557072838161
-Initial ln Posterior =  262.3557072838161
+Initial ln Likelihood =  336.50901161165757
+Initial ln Posterior =  336.50901161165757
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55734287]
-errors =  [9.71136615e-07]
+Best fit parameters =  [2462536.55685092]
+errors =  [2.39601359e-05]
 True t0 was =  2462536.5582000003
-882.60 sigma difference
-time difference = -1.234261 minutes
-auto correlation times =  [16.39359754]
+56.31 sigma difference
+time difference = -1.942680 minutes
+auto correlation times =  [32.34553341]
 Final ln Prior =  0.0
-Final ln Likelihood =  1635.4855681060844
-Final ln Posterior =  1635.4855681060844
-Final BIC =  -3265.4780747688283
-Final reduced chi2 =  3.122017108768662
+Final ln Likelihood =  1877.791491483938
+Final ln Posterior =  1877.791491483938
+Final BIC =  -3750.0899215245354
+Final reduced chi2 =  1.12772967355999
 
 
 For the true asymmetric model:
-True ln Likelihood =  1872.3914845083427
-True BIC =  -3739.289907573345
-True reduced chi2 =  1.172174175416742
-Bayes factor = exp(lnL_asym - lnL_homog) =   inf
+True ln Likelihood =  1891.3702800293718
+True BIC =  -3777.247498615403
+True reduced chi2 =  1.0159700970543617
+Bayes factor = exp(lnL_asym - lnL_homog) =   789210.6481975068
     this prefers the asymmetric model!
     so asymmetry may be retrieved given these parameters
     must manually decide whether this evidence is strong enough
@@ -822,30 +821,30 @@ Bayes factor = exp(lnL_asym - lnL_homog) =   inf
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 3 ppm
-    mean abs. above = 50 ppm
-Mean Syn. Data - Homog. Model residual = 6 ppm
-    mean abs above = 123 ppm
-Mean Syn. Data - Asym. Model residual = 3 ppm
-    mean abs above = 86 ppm
+    mean abs. above = 10 ppm
+Mean Syn. Data - Homog. Model residual = -3 ppm
+    mean abs above = 81 ppm
+Mean Syn. Data - Asym. Model residual = -6 ppm
+    mean abs above = 77 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
-Mean Asym. Model - Homog. Model residual = 13 ppm
-    mean abs. above = 178 ppm
-Mean Syn. Data - Homog. Model residual = 39 ppm
-    mean abs above = 227 ppm
-Mean Syn. Data - Asym. Model residual = 26 ppm
-    mean abs above = 99 ppm
+Mean Asym. Model - Homog. Model residual = 9 ppm
+    mean abs. above = 37 ppm
+Mean Syn. Data - Homog. Model residual = 16 ppm
+    mean abs above = 92 ppm
+Mean Syn. Data - Asym. Model residual = 7 ppm
+    mean abs above = 79 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 534 ppm
-Max Data - Asym. Model residual = 633 ppm
-Max Data - Asym. Model residual = 339 ppm
+Max Asym. Model - Homog. Model residual = 196 ppm
+Max Data - Asym. Model residual = 370 ppm
+Max Data - Asym. Model residual = 370 ppm
 
 
 ---------------------
@@ -858,33 +857,33 @@ Fitting for the transit time
 t0 uncertainty (after propagation) = 1.235466 minutes
 Initial parameter array =  [2462536.5582]
 Bounds:  2462536.5582000003  +/-  0.0008579627031520659
-[[2462536.55813527]
- [2462536.55819269]
- [2462536.55819831]]
+[[2462536.55823557]
+ [2462536.55820373]
+ [2462536.55836295]]
 N parameters =  1
 Initial ln Prior =  0.0
-Initial ln Likelihood =  -128.35846560878247
-Initial ln Posterior =  -128.35846560878247
+Initial ln Likelihood =  -132.46230118197752
+Initial ln Posterior =  -132.46230118197752
 Running for 20000 steps, including 1000 step burn-in
 For the best fit Homogeneous model:
-Best fit parameters =  [2462536.55734266]
-errors =  [7.2363764e-07]
+Best fit parameters =  [2462536.55669292]
+errors =  [2.33079772e-05]
 True t0 was =  2462536.5582000003
-1184.76 sigma difference
-time difference = -1.234569 minutes
-auto correlation times =  [20.81645111]
+64.66 sigma difference
+time difference = -2.170189 minutes
+auto correlation times =  [25.90807269]
 Final ln Prior =  0.0
-Final ln Likelihood =  1512.1792336969054
-Final ln Posterior =  1512.1792336969054
-Final BIC =  -3018.86540595047
-Final reduced chi2 =  4.136884058638448
+Final ln Likelihood =  1887.6650883166142
+Final ln Posterior =  1887.6650883166142
+Final BIC =  -3769.8371151898878
+Final reduced chi2 =  1.0464655020976348
 
 
 For the true asymmetric model:
-True ln Likelihood =  1897.654214835894
-True BIC =  -3789.8153682284474
-True reduced chi2 =  0.9642504690171421
-Bayes factor = exp(lnL_asym - lnL_homog) =   inf
+True ln Likelihood =  1907.2649903157035
+True BIC =  -3809.0369191880663
+True reduced chi2 =  0.8851494362615075
+Bayes factor = exp(lnL_asym - lnL_homog) =   325184086.2237707
     this prefers the asymmetric model!
     so asymmetry may be retrieved given these parameters
     must manually decide whether this evidence is strong enough
@@ -892,30 +891,30 @@ Bayes factor = exp(lnL_asym - lnL_homog) =   inf
 
 Full array residuals:
 Mean Asym. Model - Homog. Model residual = 3 ppm
-    mean abs. above = 66 ppm
-Mean Syn. Data - Homog. Model residual = 10 ppm
-    mean abs above = 134 ppm
-Mean Syn. Data - Asym. Model residual = 6 ppm
-    mean abs above = 79 ppm
+    mean abs. above = 12 ppm
+Mean Syn. Data - Homog. Model residual = 2 ppm
+    mean abs above = 82 ppm
+Mean Syn. Data - Asym. Model residual = -1 ppm
+    mean abs above = 75 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 In-transit residuals:
-Mean Asym. Model - Homog. Model residual = 18 ppm
-    mean abs. above = 237 ppm
-Mean Syn. Data - Homog. Model residual = 12 ppm
-    mean abs above = 264 ppm
-Mean Syn. Data - Asym. Model residual = -6 ppm
-    mean abs above = 67 ppm
+Mean Asym. Model - Homog. Model residual = 12 ppm
+    mean abs. above = 43 ppm
+Mean Syn. Data - Homog. Model residual = 18 ppm
+    mean abs above = 93 ppm
+Mean Syn. Data - Asym. Model residual = 6 ppm
+    mean abs above = 70 ppm
 Mean Syn. Data Uncertainty = 100 ppm
 Flux Scatter = 100 ppm
 
 
 Max residuals:
-Max Asym. Model - Homog. Model residual = 673 ppm
-Max Data - Asym. Model residual = 725 ppm
-Max Data - Asym. Model residual = 264 ppm
+Max Asym. Model - Homog. Model residual = 214 ppm
+Max Data - Asym. Model residual = 290 ppm
+Max Data - Asym. Model residual = 290 ppm
 
 
 ---------------------
