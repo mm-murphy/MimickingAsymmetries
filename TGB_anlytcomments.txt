@@ -1,0 +1,8 @@
+analytic paper --
+- par. near Fig.5, spoil myself at the start. it's a little technical to parse as-is, and 'wouldn't be the way you explain if just talking to someone'. maybe add a paragraph before just spoiling the answer, and giving a broader and more easy explanation, referencing Fig 5 heavily, before going into it technically.
+- reframing discussion to focus back on "what is uncertainty you need to measure limb asymmetry" idea.
+	- maybe add new axis label to Fig 7
+	- add new subsection, first in discussion, talking about this issue directly
+	- give a formula someone can use to write their  proposals
+	- maybe pare down and slightly refocus section on literature ephemerides. it reads as "everyone is wrong" which is not what we want. give motivation about why it matters, especially in context of above.
+- think about adding discussion about "how do we actually get the right times, especially knowing nothing about the limb asymmetry on a planet a priori". we don't have to fully solve it here, but good to get thinking on.
